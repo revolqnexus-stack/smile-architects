@@ -52,7 +52,7 @@ const contactInfo = [
 export default function Contact() {
   return (
     <section id="contact" className="py-48 relative overflow-hidden">
-      <div className="absolute inset-0 ivory-gradient" />
+      <div className="absolute inset-0 bg-muted/10" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       <div className="relative container mx-auto px-6">
@@ -143,7 +143,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="Enter full name"
-                    className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 bg-primary/5 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
                 <div className="space-y-3">
@@ -151,7 +151,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 bg-primary/5 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
               <div className="space-y-3">
                 <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Treatment of Interest</label>
                 <div className="relative">
-                  <select className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
+                  <select className="w-full px-8 py-5 bg-primary/5 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
                     <option>Orthodontic Braces</option>
                     <option>Clear Aligners / Invisalign</option>
                     <option>Digital Smile Designing</option>
@@ -179,7 +179,7 @@ export default function Contact() {
                 <textarea
                   rows={4}
                   placeholder="Describe your requirements for our specialist..."
-                  className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
+                  className="w-full px-8 py-5 bg-primary/5 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
                 />
               </div>
 

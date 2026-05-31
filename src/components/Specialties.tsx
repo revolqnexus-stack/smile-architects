@@ -83,7 +83,7 @@ export default function Specialties() {
                 <spec.icon className="w-6 h-6" />
               </div>
               {spec.featured && (
-                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D4AF37] mb-4 block">Signature Care</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary/60 mb-4 block">Signature Care</span>
               )}
               <h3 className="text-2xl font-serif text-foreground mb-4 leading-tight tracking-tight">{spec.title}</h3>
               <p className="text-sm text-muted-foreground/90 leading-relaxed flex-1 mb-8 font-medium tracking-tight">{spec.description}</p>
@@ -123,7 +123,7 @@ export default function Specialties() {
                 href="tel:+919447125344"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary rounded-full font-bold text-sm shadow-xl transition-all duration-300 hover:bg-[#FDF5E6]"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary rounded-full font-bold text-sm shadow-xl transition-all duration-300 hover:bg-white/90"
               >
                 <Phone className="w-4 h-4" /> Direct Consultation
               </motion.a>

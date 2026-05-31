@@ -37,7 +37,7 @@ export default function Hero() {
       {/* Background layers */}
       <div className="absolute inset-0 hero-gradient" />
       <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[140px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] translate-y-1/4 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-primary/3 blur-[120px] translate-y-1/4 -translate-x-1/4 pointer-events-none" />
 
       {/* Decorative grid */}
       <div
@@ -174,7 +174,7 @@ export default function Hero() {
 
             {/* Decorative ring */}
             <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-primary/10 pointer-events-none" />
-            <div className="absolute -top-3 -right-3 w-20 h-20 rounded-full border border-accent/20 pointer-events-none" />
+            <div className="absolute -top-3 -right-3 w-20 h-20 rounded-full border border-primary/5 pointer-events-none" />
           </motion.div>
         </div>
       </div>

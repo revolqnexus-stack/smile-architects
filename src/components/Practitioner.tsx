@@ -19,7 +19,7 @@ export default function Practitioner() {
   return (
     <section id="practitioner" className="py-48 relative overflow-hidden">
       <div className="absolute inset-0 bg-muted/20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#FFC233]/3 blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-primary/3 blur-[160px] pointer-events-none" />
 
       <div className="relative container mx-auto px-6">
         {/* Header */}
@@ -74,7 +74,7 @@ export default function Practitioner() {
               {/* Name overlay */}
               <div className="absolute bottom-10 left-10 right-10 md:hidden">
                 <div className="flex items-center gap-2.5 mb-2">
-                  <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                  <Star className="w-4 h-4 text-primary fill-primary" />
                   <span className="text-white/80 text-[10px] font-bold uppercase tracking-widest">MDS Orthodontist</span>
                 </div>
                 <h3 className="text-3xl font-serif text-white mb-1">Dr. Jeo Tom Charls</h3>
@@ -104,8 +104,8 @@ export default function Practitioner() {
               {/* Desktop name */}
               <div className="hidden md:block mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <Star className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
-                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#D4AF37]">Elite Clinical Specialist</span>
+                  <Star className="w-5 h-5 text-primary fill-primary" />
+                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-primary/60">Elite Clinical Specialist</span>
                 </div>
                 <h3 className="text-4xl lg:text-5xl font-serif text-foreground mb-2 tracking-tight">Dr. Jeo Tom Charls</h3>
                 <p className="text-muted-foreground/80 text-lg font-medium">Chief Dental Surgeon & Orthodontist</p>
@@ -134,9 +134,9 @@ export default function Practitioner() {
               </div>
 
               {/* Visiting */}
-              <div className="p-6 bg-[#FDF5E6]/50 rounded-[2rem] border border-primary/5 mb-12">
+              <div className="p-6 bg-primary/5 rounded-[2rem] border border-primary/5 mb-12">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" /> Institutional Affiliations
+                  <MapPin className="w-3.5 h-3.5 text-primary/40" /> Institutional Affiliations
                 </p>
                 <ul className="space-y-3">
                   {visiting.map(v => (

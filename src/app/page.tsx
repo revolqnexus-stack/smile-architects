@@ -51,16 +51,13 @@
        <Contact /> 
   
        {/* ── Footer ───────────────────────────────── */} 
-       <footer className="relative overflow-hidden" style={{ background: "#1A0F0D" }}> 
+       <footer className="relative overflow-hidden" style={{ background: "#0F172A" }}> 
   
          {/* Background glows */} 
          <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(30,77,43,0.15) 0%, transparent 70%)" }} /> 
+           style={{ background: "radial-gradient(circle, rgba(30,77,43,0.1) 0%, transparent 70%)" }} /> 
          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(255,194,51,0.1) 0%, transparent 70%)" }} /> 
-  
-         {/* Gold top border */} 
-         <div className="gold-divider" /> 
+           style={{ background: "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)" }} /> 
   
          <div className="relative container mx-auto px-6 pt-20 pb-10"> 
            <div className="grid lg:grid-cols-4 gap-14 mb-16"> 
@@ -70,7 +67,7 @@
                <Link href="/" className="inline-block mb-8"> 
                  <motion.div whileHover={{ scale: 1.05 }} className="relative w-24 h-24"> 
                    <Image src="/logo.png" alt="Smile Architects Dental Clinic" 
-                     fill sizes="96px" className="object-contain brightness-110 drop-shadow-[0_4px_12px_rgba(255,194,51,0.1)]" /> 
+                     fill sizes="96px" className="object-contain brightness-110 drop-shadow-[0_4px_12px_rgba(255,255,255,0.1)]" /> 
                  </motion.div> 
                </Link> 
   
@@ -78,7 +75,7 @@
                  Premier multi-specialty dental facility in Pala, Kottayam. 
                  Led by Dr. Jeo Tom Charls — delivering excellence in Orthodontics & Dentofacial Orthopedics. 
                </p> 
-               <p className="text-[10px] font-bold uppercase tracking-[0.25em] mb-10" style={{ color: "rgba(255,194,51,0.6)" }}> 
+               <p className="text-[10px] font-bold uppercase tracking-[0.25em] mb-10" style={{ color: "rgba(255,255,255,0.3)" }}> 
                  KSDC Reg. No. 9451 
                </p> 
   
@@ -91,8 +88,8 @@
                        className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300" 
                        style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)" }} 
                        onMouseEnter={e => { 
-                         (e.currentTarget as HTMLElement).style.background = "rgba(255,194,51,0.1)"; 
-                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,194,51,0.3)"; 
+                         (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)"; 
+                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; 
                        }} 
                        onMouseLeave={e => { 
                          (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.02)"; 
@@ -109,7 +106,7 @@
              {/* Specialties */} 
              <div> 
                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6" 
-                 style={{ color: "rgba(255,194,51,0.7)" }}> 
+                 style={{ color: "rgba(255,255,255,0.6)" }}> 
                  Specialties 
                </h4> 
                <ul className="space-y-3"> 
@@ -117,9 +114,9 @@
                    <li key={item}> 
                      <Link href="#specialties" 
                        className="text-sm transition-colors duration-200" 
-                       style={{ color: "rgba(255,255,255,0.45)" }} 
-                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
-                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.45)"} 
+                       style={{ color: "rgba(255,255,255,0.4)" }} 
+                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFFFFF"} 
+                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"} 
                      > 
                        {item} 
                      </Link> 
@@ -131,7 +128,7 @@
              {/* Quick links */} 
              <div> 
                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6" 
-                 style={{ color: "rgba(255,194,51,0.7)" }}> 
+                 style={{ color: "rgba(255,255,255,0.6)" }}> 
                  Quick Links 
                </h4> 
                <ul className="space-y-3"> 
@@ -140,9 +137,9 @@
                      <Link href={href} 
                        target={href.startsWith('http') ? "_blank" : undefined} 
                        className="text-sm transition-colors duration-200" 
-                       style={{ color: "rgba(255,255,255,0.45)" }} 
-                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
-                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.45)"} 
+                       style={{ color: "rgba(255,255,255,0.4)" }} 
+                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFFFFF"} 
+                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"} 
                      > 
                        {label} 
                      </Link> 
@@ -154,14 +151,14 @@
   
            {/* Bottom bar */} 
            <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" 
-             style={{ borderTop: "1px solid rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.22)" }}> 
+             style={{ borderTop: "1px solid rgba(255,255,255,0.04)", color: "rgba(255,255,255,0.2)" }}> 
              <div className="flex flex-col sm:flex-row items-center gap-4"> 
                <p>© 2026 Smile Architects Dental Clinic. All rights reserved.</p> 
-               <span className="hidden sm:block w-1 h-1 rounded-full" style={{ background: "rgba(255,255,255,0.12)" }} /> 
+               <span className="hidden sm:block w-1 h-1 rounded-full" style={{ background: "rgba(255,255,255,0.1)" }} /> 
                <Link href="https://revol-q.vercel.app" target="_blank" 
                  className="flex items-center gap-1.5 transition-colors duration-200 group" 
-                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
-                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.22)"} 
+                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFFFFF"} 
+                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.2)"} 
                > 
                  Powered by <span className="font-bold tracking-wider">REVOLQ</span> 
                </Link> 

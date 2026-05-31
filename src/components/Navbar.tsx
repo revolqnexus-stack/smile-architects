@@ -6,7 +6,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const navLinks = ['Specialties', 'Gallery', 'Practitioner', 'Contact'];
+const navLinks = [ 
+  { label: 'Specialties', href: '#specialties' }, 
+  { label: 'Gallery',     href: '#gallery' }, 
+  { label: 'Doctor',      href: '#practitioner' }, 
+  { label: 'Contact',     href: '#contact' }, 
+]; 
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +19,7 @@ export default function Navbar() {
   const { scrollY } = useScroll();
 
   const bgOpacity = useTransform(scrollY, [0, 80], [0, 1]);
-  const shadowOpacity = useTransform(scrollY, [0, 80], [0, 0.08]);
+  const shadowOpacity = useTransform(scrollY, [0, 80], [0, 0.05]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,7 +29,7 @@ export default function Navbar() {
       { rootMargin: '-40% 0px -55% 0px' }
     );
     navLinks.forEach(l => {
-      const el = document.getElementById(l.toLowerCase());
+      const el = document.getElementById(l.href.replace('#', ''));
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
@@ -33,79 +38,70 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50"
-        style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="absolute inset-0 bg-background border-b border-border"
-          style={{ opacity: bgOpacity }}
+          className="absolute inset-0 bg-white/92 border-b border-black/5"
+          style={{ 
+            opacity: bgOpacity, 
+            backdropFilter: 'blur(8px)', 
+            WebkitBackdropFilter: 'blur(8px)' 
+          }}
         />
         <motion.div
           className="absolute inset-0"
           style={{ boxShadow: `0 4px 30px rgba(0,0,0,${shadowOpacity})` }}
         />
 
-        <div className="relative container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="relative container mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="relative w-12 h-12 mr-3"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              className="relative w-32 h-32 -my-6"
             >
               <Image
                 src="/logo.png"
                 alt="Smile Architects Dental Clinic Logo"
                 fill
-                sizes="48px"
-                className="object-contain drop-shadow-sm"
+                sizes="128px"
+                className="object-contain"
                 priority
               />
             </motion.div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold tracking-[0.1em] leading-none text-primary">SMILE ARCHITECTS</span>
-              <span className="text-[8px] uppercase tracking-[0.3em] font-bold text-[#D4AF37]">Advanced Dental Care</span>
-            </div>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-12">
             {navLinks.map((item) => (
               <Link
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="relative text-[13px] font-bold uppercase tracking-widest py-1 group"
+                key={item.label}
+                href={item.href}
+                className="relative text-[13px] font-bold uppercase tracking-[0.15em] py-1 group"
               >
-                <span className={`transition-colors duration-200 ${activeSection === item.toLowerCase() ? 'text-primary' : 'text-foreground/50 hover:text-foreground'}`}>
-                  {item}
+                <span className={`transition-colors duration-300 ${activeSection === item.href.replace('#', '') ? 'text-primary' : 'text-[#111827]/60 hover:text-primary'}`}>
+                  {item.label}
                 </span>
                 <motion.span
                   className="absolute -bottom-1 left-0 h-[1.5px] bg-primary rounded-full"
                   initial={{ width: 0 }}
-                  animate={{ width: activeSection === item.toLowerCase() ? '100%' : 0 }}
+                  animate={{ width: activeSection === item.href.replace('#', '') ? '100%' : 0 }}
                   transition={{ duration: 0.3 }}
                 />
               </Link>
             ))}
           </div>
 
-          {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
-              <Link
-                href="tel:+919447125344"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/20 text-primary text-[11px] font-bold uppercase tracking-widest hover:bg-primary/5 transition-all"
-              >
-                <Phone className="w-3.5 h-3.5" /> Call Us
-              </Link>
-            </motion.div>
+          {/* CTA button */}
+          <div className="hidden lg:flex items-center">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="https://wa.me/919447125344"
                 target="_blank"
-                className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white text-[11px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 transition-all"
+                className="px-8 py-3.5 rounded-full bg-primary text-white text-[11px] font-bold uppercase tracking-[0.2em] shadow-xl shadow-primary/20 transition-all hover:shadow-primary/30"
               >
-                <MessageCircle className="w-4 h-4 fill-current" /> Consult Now
+                Book Appointment
               </Link>
             </motion.div>
           </div>
@@ -164,27 +160,27 @@ export default function Navbar() {
               <nav className="flex-1 p-6 space-y-1">
                 {navLinks.map((item, i) => (
                   <motion.div
-                    key={item}
+                    key={item.label}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                   >
                     <Link
-                      href={`#${item.toLowerCase()}`}
+                      href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center justify-between py-3.5 px-4 rounded-2xl hover:bg-muted transition-colors group"
+                      className="flex items-center justify-between py-4 px-4 rounded-2xl hover:bg-primary/5 transition-colors group"
                     >
-                      <span className="font-serif font-bold text-foreground">{item}</span>
-                      <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+                      <span className="text-lg font-bold text-[#111827] uppercase tracking-widest">{item.label}</span>
+                      <ChevronRight className="w-5 h-5 text-[#111827]/20 group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
                     </Link>
                   </motion.div>
                 ))}
               </nav>
 
-              <div className="p-6 space-y-3 border-t border-border">
+              <div className="p-6 space-y-4 border-t border-black/5">
                 <Link
                   href="tel:+919447125344"
-                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl clay-card !shadow-sm text-primary font-bold"
+                  className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-[#111827]/5 text-[#111827] font-bold uppercase tracking-widest text-[11px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4" /> Call Specialist
@@ -192,7 +188,7 @@ export default function Navbar() {
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl clay-button text-white font-bold shadow-lg shadow-primary/20"
+                  className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-primary text-white font-bold uppercase tracking-[0.2em] text-[11px] shadow-lg shadow-primary/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <MessageCircle className="w-4 h-4" /> WhatsApp Booking
