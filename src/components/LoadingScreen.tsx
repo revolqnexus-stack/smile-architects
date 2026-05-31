@@ -38,14 +38,14 @@
              }} 
            /> 
   
-           {/* Deep navy spotlight from top */} 
+           {/* Deep forest green spotlight from top */} 
            <motion.div 
              initial={{ opacity: 0 }} 
              animate={{ opacity: 1 }} 
              transition={{ duration: 2.5 }} 
              className="absolute inset-0 pointer-events-none" 
              style={{ 
-               background: "radial-gradient(ellipse 50% 40% at 50% 0%, rgba(27,77,142,0.07) 0%, transparent 100%)", 
+               background: "radial-gradient(ellipse 50% 40% at 50% 0%, rgba(30,77,43,0.07) 0%, transparent 100%)", 
              }} 
            /> 
   
@@ -53,7 +53,7 @@
            <div 
              className="absolute inset-0 pointer-events-none" 
              style={{ 
-               background: "radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201,168,76,0.04) 0%, transparent 60%)", 
+               background: "radial-gradient(ellipse 80% 60% at 50% 110%, rgba(255,194,51,0.04) 0%, transparent 60%)", 
              }} 
            /> 
   
@@ -78,9 +78,9 @@
                /> 
                <defs> 
                  <linearGradient id="arcGrad" x1="0" y1="0" x2="220" y2="220" gradientUnits="userSpaceOnUse"> 
-                   <stop offset="0%" stopColor="#C9A84C" stopOpacity="0" /> 
-                   <stop offset="40%" stopColor="#C9A84C" stopOpacity="1" /> 
-                   <stop offset="100%" stopColor="#C9A84C" stopOpacity="0" /> 
+                   <stop offset="0%" stopColor="#FFC233" stopOpacity="0" /> 
+                   <stop offset="40%" stopColor="#FFC233" stopOpacity="1" /> 
+                   <stop offset="100%" stopColor="#FFC233" stopOpacity="0" /> 
                  </linearGradient> 
                </defs> 
              </svg> 
@@ -100,7 +100,7 @@
              <svg viewBox="0 0 175 175" fill="none"> 
                <circle 
                  cx="87.5" cy="87.5" r="83" 
-                 stroke="#C9A84C" 
+                 stroke="#FFC233" 
                  strokeWidth="0.5" 
                  strokeDasharray="1 20" 
                  strokeLinecap="round" 
@@ -117,7 +117,7 @@
              style={{ 
                width: 180, 
                height: 180, 
-               background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)", 
+               background: "radial-gradient(circle, rgba(255,194,51,0.06) 0%, transparent 70%)", 
                filter: "blur(20px)", 
              }} 
            /> 
@@ -144,7 +144,7 @@
                  height: 160, 
                  borderRadius: "50%", 
                  background: "rgba(255,255,255,0.03)", 
-                 boxShadow: "0 0 80px rgba(201,168,76,0.15), inset 0 0 20px rgba(201,168,76,0.05)", 
+                 boxShadow: "0 0 80px rgba(255,194,51,0.15), inset 0 0 20px rgba(255,194,51,0.05)", 
                  display: "flex", 
                  alignItems: "center", 
                  justifyContent: "center", 
@@ -154,12 +154,12 @@
                <motion.div
                  animate={{ scale: [1, 1.4], opacity: [0.3, 0] }}
                  transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-                 className="absolute inset-0 rounded-full border border-[#C9A84C]/30"
+                 className="absolute inset-0 rounded-full border border-[#FFC233]/30"
                />
                <motion.div
                  animate={{ scale: [1, 1.8], opacity: [0.2, 0] }}
                  transition={{ duration: 2, delay: 0.5, repeat: Infinity, ease: "easeOut" }}
-                 className="absolute inset-0 rounded-full border border-[#C9A84C]/20"
+                 className="absolute inset-0 rounded-full border border-[#FFC233]/20"
                />
 
                <Image 
@@ -186,7 +186,7 @@
                  letterSpacing: "0.25em", 
                  color: "#f5f5f0", 
                  lineHeight: 1, 
-                 textShadow: "0 0 30px rgba(201,168,76,0.2)", 
+                 textShadow: "0 0 30px rgba(255,194,51,0.2)", 
                }}>
                  SMILE
                </h1>
@@ -194,7 +194,7 @@
                  fontSize: "0.75rem", 
                  fontWeight: 600, 
                  textTransform: "uppercase", 
-                 color: "rgba(201,168,76,0.8)", 
+                 color: "rgba(255,194,51,0.8)", 
                  letterSpacing: "0.6em", 
                  marginTop: "0.5rem"
                }}> 
@@ -220,7 +220,7 @@
                  transition={{ duration: 2.2, ease: "easeInOut" }} 
                  className="absolute inset-0 rounded-full" 
                  style={{ 
-                   background: "linear-gradient(90deg, transparent, #C9A84C)", 
+                   background: "linear-gradient(90deg, transparent, #FFC233)", 
                  }} 
                /> 
              </motion.div> 

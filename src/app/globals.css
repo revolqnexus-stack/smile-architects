@@ -1,26 +1,26 @@
-@import "tailwindcss"; 
+ @import "tailwindcss"; 
   
  @layer base { 
    :root { 
-     --background: #FEFDF9; 
-     --foreground: #0F1923; 
+     --background: #FDF5E6; 
+     --foreground: #1E4D2B; 
      --card: #FFFFFF; 
-     --card-foreground: #0F1923; 
-     --popover: #FEFDF9; 
-     --popover-foreground: #0F1923; 
-     --primary: #1B4D8E; 
-     --primary-foreground: #FFFFFF; 
-     --secondary: #C9A84C; 
-     --secondary-foreground: #0F1923; 
-     --muted: #F4F2EC; 
-     --muted-foreground: #6B6455; 
-     --accent: #C9A84C; 
-     --accent-foreground: #0F1923; 
+     --card-foreground: #1E4D2B; 
+     --popover: #FDF5E6; 
+     --popover-foreground: #1E4D2B; 
+     --primary: #1E4D2B; 
+     --primary-foreground: #FDF5E6; 
+     --secondary: #FFC233; 
+     --secondary-foreground: #1E4D2B; 
+     --muted: #C5C781; 
+     --muted-foreground: #4D2C1E; 
+     --accent: #FFC233; 
+     --accent-foreground: #1E4D2B; 
      --destructive: #DC2626; 
      --destructive-foreground: #FFFFFF; 
-     --border: #E8E4D8; 
-     --input: #E8E4D8; 
-     --ring: #1B4D8E; 
+     --border: #DEDAB6; 
+     --input: #DEDAB6; 
+     --ring: #1E4D2B; 
      --radius: 0.625rem; 
    } 
  } 
@@ -65,22 +65,22 @@
   
  /* ── Gradients ───────────────────────────────────── */ 
  .ivory-gradient { 
-   background: linear-gradient(160deg, #FEFDF9 0%, #F4F2EC 50%, #EDE9DF 100%); 
+   background: linear-gradient(160deg, #FDF5E6 0%, #DEDAB6 50%, #C5C781 100%); 
  } 
   
  .hero-gradient { 
    background: 
-     radial-gradient(ellipse 70% 55% at 65% 35%, rgba(27,77,142,0.055) 0%, transparent 65%), 
-     radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%), 
-     linear-gradient(160deg, #FEFDF9 0%, #F4F2EC 100%); 
+     radial-gradient(ellipse 70% 55% at 65% 35%, rgba(30,77,43,0.055) 0%, transparent 65%), 
+     radial-gradient(ellipse 40% 40% at 20% 80%, rgba(255,194,51,0.04) 0%, transparent 60%), 
+     linear-gradient(160deg, #FDF5E6 0%, #DEDAB6 100%); 
  } 
   
  .gold-gradient { 
-   background: linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #C9A84C 100%); 
+   background: linear-gradient(135deg, #FFC233 0%, #FFE082 50%, #FFC233 100%); 
  } 
   
- .navy-gradient { 
-   background: linear-gradient(135deg, #0F2D52 0%, #1B4D8E 60%, #2560AA 100%); 
+ .forest-gradient { 
+   background: linear-gradient(135deg, #1E4D2B 0%, #2E7D32 60%, #388E3C 100%); 
  } 
   
  /* ── Glass effects ───────────────────────────────── */ 
@@ -88,22 +88,22 @@
    background: rgba(255, 255, 255, 0.78); 
    backdrop-filter: blur(20px); 
    -webkit-backdrop-filter: blur(20px); 
-   border: 1px solid rgba(27, 77, 142, 0.07); 
-   box-shadow: 0 4px 24px rgba(15, 25, 35, 0.04); 
+   border: 1px solid rgba(30, 77, 43, 0.07); 
+   box-shadow: 0 4px 24px rgba(30, 77, 43, 0.04); 
  } 
   
  .glass-dark { 
-   background: rgba(12, 22, 40, 0.82); 
+   background: rgba(12, 40, 22, 0.82); 
    backdrop-filter: blur(24px); 
    -webkit-backdrop-filter: blur(24px); 
    border: 1px solid rgba(255, 255, 255, 0.07); 
  } 
   
  .glass-gold { 
-   background: rgba(201, 168, 76, 0.08); 
+   background: rgba(255, 194, 51, 0.08); 
    backdrop-filter: blur(12px); 
    -webkit-backdrop-filter: blur(12px); 
-   border: 1px solid rgba(201, 168, 76, 0.2); 
+   border: 1px solid rgba(255, 194, 51, 0.2); 
  } 
   
  /* ── Noise texture ───────────────────────────────── */ 
@@ -119,7 +119,7 @@
  /* ── Gold divider ────────────────────────────────── */ 
  .gold-divider { 
    height: 1px; 
-   background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.5) 30%, rgba(201,168,76,0.5) 70%, transparent 100%); 
+   background: linear-gradient(90deg, transparent 0%, rgba(255,194,51,0.5) 30%, rgba(255,194,51,0.5) 70%, transparent 100%); 
  } 
   
  /* ── Shimmer text ────────────────────────────────── */ 
@@ -129,7 +129,7 @@
  } 
   
  .text-shimmer { 
-   background: linear-gradient(90deg, #1B4D8E 0%, #C9A84C 40%, #E8C96A 55%, #1B4D8E 100%); 
+   background: linear-gradient(90deg, #1E4D2B 0%, #FFC233 40%, #FFE082 55%, #1E4D2B 100%); 
    background-size: 200% auto; 
    -webkit-background-clip: text; 
    -webkit-text-fill-color: transparent; 
@@ -138,7 +138,7 @@
  } 
   
  .text-gold { 
-   background: linear-gradient(135deg, #C9A84C 0%, #E8C96A 50%, #B8952E 100%); 
+   background: linear-gradient(135deg, #FFC233 0%, #FFE082 50%, #D4A017 100%); 
    -webkit-background-clip: text; 
    -webkit-text-fill-color: transparent; 
    background-clip: text; 
@@ -153,14 +153,14 @@
   
  /* ── Glow pulse ──────────────────────────────────── */ 
  @keyframes glow-pulse { 
-   0%, 100% { box-shadow: 0 0 20px rgba(27, 77, 142, 0.15); } 
-   50%       { box-shadow: 0 0 48px rgba(27, 77, 142, 0.35); } 
+   0%, 100% { box-shadow: 0 0 20px rgba(30, 77, 43, 0.15); } 
+   50%       { box-shadow: 0 0 48px rgba(30, 77, 43, 0.35); } 
  } 
  .animate-glow { animation: glow-pulse 3s ease-in-out infinite; } 
   
  @keyframes gold-glow { 
-   0%, 100% { box-shadow: 0 0 16px rgba(201,168,76,0.2); } 
-   50%       { box-shadow: 0 0 40px rgba(201,168,76,0.45); } 
+   0%, 100% { box-shadow: 0 0 16px rgba(255,194,51,0.2); } 
+   50%       { box-shadow: 0 0 40px rgba(255,194,51,0.45); } 
  } 
  .animate-gold-glow { animation: gold-glow 3s ease-in-out infinite; } 
   
@@ -185,7 +185,7 @@
    inset: 0; 
    border-radius: inherit; 
    padding: 1px; 
-   background: linear-gradient(90deg, transparent, rgba(201,168,76,0.6), transparent); 
+   background: linear-gradient(90deg, transparent, rgba(255,194,51,0.6), transparent); 
    background-size: 200% 100%; 
    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); 
    -webkit-mask-composite: xor; 

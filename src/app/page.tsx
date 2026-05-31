@@ -51,13 +51,13 @@
        <Contact /> 
   
        {/* ── Footer ───────────────────────────────── */} 
-       <footer className="relative overflow-hidden" style={{ background: "#090E17" }}> 
+       <footer className="relative overflow-hidden" style={{ background: "#1A0F0D" }}> 
   
          {/* Background glows */} 
          <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(27,77,142,0.12) 0%, transparent 70%)" }} /> 
+           style={{ background: "radial-gradient(circle, rgba(30,77,43,0.15) 0%, transparent 70%)" }} /> 
          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)" }} /> 
+           style={{ background: "radial-gradient(circle, rgba(255,194,51,0.1) 0%, transparent 70%)" }} /> 
   
          {/* Gold top border */} 
          <div className="gold-divider" /> 
@@ -78,7 +78,7 @@
                  Premier multi-specialty dental facility in Pala, Kottayam. 
                  Led by Dr. Jeo Tom Charls — MDS Orthodontist & Dentofacial Orthopedics. 
                </p> 
-               <p className="text-xs mb-8" style={{ color: "rgba(201,168,76,0.5)" }}> 
+               <p className="text-xs mb-8" style={{ color: "rgba(255,194,51,0.5)" }}> 
                  Kerala State Dental Council Reg. No. 9451 
                </p> 
   
@@ -91,8 +91,8 @@
                        className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300" 
                        style={{ border: "1px solid rgba(255,255,255,0.08)" }} 
                        onMouseEnter={e => { 
-                         (e.currentTarget as HTMLElement).style.background = "rgba(201,168,76,0.15)"; 
-                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,168,76,0.4)"; 
+                         (e.currentTarget as HTMLElement).style.background = "rgba(255,194,51,0.15)"; 
+                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,194,51,0.4)"; 
                        }} 
                        onMouseLeave={e => { 
                          (e.currentTarget as HTMLElement).style.background = "transparent"; 
@@ -109,7 +109,7 @@
              {/* Specialties */} 
              <div> 
                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6" 
-                 style={{ color: "rgba(201,168,76,0.7)" }}> 
+                 style={{ color: "rgba(255,194,51,0.7)" }}> 
                  Specialties 
                </h4> 
                <ul className="space-y-3"> 
@@ -118,7 +118,7 @@
                      <Link href="#specialties" 
                        className="text-sm transition-colors duration-200" 
                        style={{ color: "rgba(255,255,255,0.45)" }} 
-                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#C9A84C"} 
+                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
                        onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.45)"} 
                      > 
                        {item} 
@@ -131,7 +131,7 @@
              {/* Quick links */} 
              <div> 
                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6" 
-                 style={{ color: "rgba(201,168,76,0.7)" }}> 
+                 style={{ color: "rgba(255,194,51,0.7)" }}> 
                  Quick Links 
                </h4> 
                <ul className="space-y-3"> 
@@ -141,7 +141,7 @@
                        target={href.startsWith('http') ? "_blank" : undefined} 
                        className="text-sm transition-colors duration-200" 
                        style={{ color: "rgba(255,255,255,0.45)" }} 
-                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#C9A84C"} 
+                       onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
                        onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.45)"} 
                      > 
                        {label} 
@@ -160,7 +160,7 @@
                <span className="hidden sm:block w-1 h-1 rounded-full" style={{ background: "rgba(255,255,255,0.12)" }} /> 
                <Link href="https://revol-q.vercel.app" target="_blank" 
                  className="flex items-center gap-1.5 transition-colors duration-200 group" 
-                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#C9A84C"} 
+                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFC233"} 
                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.22)"} 
                > 
                  Powered by <span className="font-bold tracking-wider">REVOLQ</span> 

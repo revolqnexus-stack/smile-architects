@@ -19,7 +19,7 @@ export default function Practitioner() {
   return (
     <section id="practitioner" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-muted/20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-primary/3 blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#FFC233]/3 blur-[160px] pointer-events-none" />
 
       <div className="relative container mx-auto px-6">
         {/* Header */}
