@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { Phone, MessageCircle, Menu, X, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = ['Specialties', 'Gallery', 'Practitioner', 'Contact'];
 
@@ -48,11 +49,17 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <motion.div
-              whileHover={{ scale: 1.08, rotate: 3 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-serif text-xl font-bold shadow-lg shadow-primary/20"
+              className="relative w-10 h-10"
             >
-              V
+              <Image
+                src="/images/logo.png"
+                alt="Virtue Dental Clinic Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </motion.div>
             <div className="flex flex-col">
               <span className="text-lg font-serif font-bold text-foreground leading-none tracking-tight">VIRTUE</span>

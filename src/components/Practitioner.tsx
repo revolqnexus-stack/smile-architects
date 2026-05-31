@@ -65,7 +65,7 @@ export default function Practitioner() {
             {/* Image — 2 cols */}
             <div className="md:col-span-2 relative min-h-[420px] md:min-h-0">
               <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop"
+                src="/images/gallery/doctor pic.png"
                 alt="Dr. Abhijit Sajo Sebastian"
                 className="absolute inset-0 w-full h-full object-cover"
               />

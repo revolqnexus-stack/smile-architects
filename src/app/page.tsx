@@ -7,6 +7,7 @@ import Gallery from "@/components/Gallery";
 import Practitioner from "@/components/Practitioner";
 import Contact from "@/components/Contact";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Globe, Mail, MessageCircle } from "lucide-react";
 
@@ -47,10 +48,15 @@ export default function Home() {
             <div className="lg:col-span-2">
               <Link href="/" className="flex items-center gap-3 group mb-7 w-fit">
                 <motion.div
-                  whileHover={{ scale: 1.08, rotate: 3 }}
-                  className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-serif text-xl font-bold"
+                  whileHover={{ scale: 1.05 }}
+                  className="relative w-10 h-10"
                 >
-                  V
+                  <Image
+                    src="/images/logo.png"
+                    alt="Virtue Dental Clinic Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </motion.div>
                 <div className="flex flex-col">
                   <span className="text-lg font-serif font-bold text-white leading-none">VIRTUE</span>
