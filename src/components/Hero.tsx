@@ -23,7 +23,7 @@ const container = {
 };
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
 export default function Hero() {
@@ -114,7 +114,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.92, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             style={{ y: imageY }}
             className="relative"
           >
@@ -148,7 +148,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 30, x: 20 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 0.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
               className="absolute -bottom-6 -right-4 sm:-right-8 glass-card p-5 rounded-2xl shadow-2xl max-w-[220px] animate-float"
             >
               <div className="flex items-center gap-3 mb-3">

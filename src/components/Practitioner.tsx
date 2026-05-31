@@ -59,7 +59,7 @@ export default function Practitioner() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             className="grid md:grid-cols-5 gap-0 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10 bg-white"
           >
             {/* Image — 2 cols */}
