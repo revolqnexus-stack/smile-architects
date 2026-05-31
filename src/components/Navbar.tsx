@@ -51,13 +51,13 @@ export default function Navbar() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative w-28 h-28"
+              className="relative w-36 h-36"
             >
               <Image
                 src="/logo.png"
                 alt="Smile Architects Dental Clinic Logo"
                 fill
-                sizes="112px"
+                sizes="144px"
                 className="object-contain"
                 priority
               />

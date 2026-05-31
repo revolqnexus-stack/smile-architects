@@ -140,8 +140,8 @@
                }} 
                className="relative mb-12" 
                style={{ 
-                 width: 160, 
-                 height: 160, 
+                 width: 200, 
+                 height: 200, 
                  borderRadius: "50%", 
                  background: "rgba(255,255,255,0.03)", 
                  boxShadow: "0 0 80px rgba(255,194,51,0.15), inset 0 0 20px rgba(255,194,51,0.05)", 
@@ -165,8 +165,8 @@
                <Image 
                  src="/logo.png" 
                  alt="Smile Architects Logo" 
-                 width={110} 
-                 height={110} 
+                 width={140} 
+                 height={140} 
                  className="object-contain relative z-10" 
                  priority 
                /> 
