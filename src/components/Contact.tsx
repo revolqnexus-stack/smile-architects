@@ -16,14 +16,14 @@ export default function Contact() {
             className="max-w-xl"
           >
             <h2 className="text-4xl lg:text-5xl font-serif text-foreground mb-10 leading-[1.1]">
-              In the heart of <br />
-              <span className="italic text-primary underline underline-offset-8">Kuravilangad.</span>
+              On the bypass road <br />
+              <span className="italic text-primary underline underline-offset-8">in Pala.</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              Find us at Central Junction, directly opposite Hotel Sanyo and 
-              near the Kuravilangad bus station. Our clinic serves as a regional 
-              specialist hub for the Kottayam district.
+              Find us along Pala Bypass Road in Vellappadu, with ample parking 
+              for private vehicles. Virtue Dental Clinic serves as a specialist 
+              hub for Pala and the wider Kottayam district.
             </p>
 
             <div className="space-y-10">
@@ -34,10 +34,17 @@ export default function Contact() {
                 <div>
                   <h4 className="text-xl font-serif text-foreground mb-2">Our Location</h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    1st Floor, Chennanparambil Building, <br />
-                    Central Junction, Kuravilangad, <br />
-                    Kottayam, Kerala - 686633
+                    Manakkattu Avenue, 138/2, <br />
+                    Pala Bypass Road, Vellappadu, <br />
+                    Pala, Kottayam, Kerala — 686575
                   </p>
+                  <Link
+                    href="https://maps.app.goo.gl/5DS1k9PnA9vQbMU2A"
+                    target="_blank"
+                    className="inline-flex items-center gap-1 mt-3 text-sm text-primary font-medium hover:underline"
+                  >
+                    <MapPin className="w-3.5 h-3.5" /> Get Directions
+                  </Link>
                 </div>
               </div>
 
@@ -52,16 +59,22 @@ export default function Contact() {
                   </p>
                   <div className="flex flex-col gap-3">
                     <Link 
-                      href="tel:08071909299" 
+                      href="tel:+918156822525" 
                       className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                     >
-                      +91 80 7190 9299 (Ext. 033)
+                      +91 81568 22525
                     </Link>
                     <Link 
-                      href="https://wa.me/918071909299" 
+                      href="https://wa.me/918156822525" 
                       className="text-primary font-bold hover:underline flex items-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
+                    </Link>
+                    <Link
+                      href="mailto:abhijitsebastian@gmail.com"
+                      className="text-foreground/70 hover:text-primary transition-colors text-sm flex items-center gap-2"
+                    >
+                      abhijitsebastian@gmail.com
                     </Link>
                   </div>
                 </div>
@@ -75,7 +88,7 @@ export default function Contact() {
                   <h4 className="text-xl font-serif text-foreground mb-2">Opening Hours</h4>
                   <p className="text-muted-foreground leading-relaxed">
                     Monday – Saturday: <br />
-                    09:00 AM – 07:00 PM <br />
+                    10:00 AM – 07:00 PM <br />
                     <span className="text-destructive font-medium mt-1 inline-block italic">Closed on Sundays</span>
                   </p>
                 </div>
@@ -87,7 +100,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-foreground font-medium mb-1">Affordable Specialist Care</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Initial specialist consultation fee is approximately ₹150. We are listed on Practo and Justdial for easy scheduling.
+                  Prior appointment recommended. Listed on Practo and Justdial for easy scheduling. Masks required on premises.
                 </p>
               </div>
             </div>

@@ -17,62 +17,62 @@ import {
 
 const specialties = [
   {
-    title: "Endodontics",
-    description: "Specialized in saving natural teeth with daily, expert painless root canal treatments (RCT) and pulp therapy.",
-    icon: Microscope,
-    highlights: ["Painless RCT", "Pulp Therapy", "Micro-surgery"]
-  },
-  {
-    title: "Prosthodontics",
-    description: "Lead expertise in dental restoration including metal-based partial dentures, crowns, bridges, and implants.",
+    title: "General Dentistry",
+    description: "Routine checkups, professional cleanings, fillings, and preventive care to maintain your oral health.",
     icon: Stethoscope,
-    highlights: ["Implants", "Crowns", "Bridges", "Dentures"]
-  },
-  {
-    title: "Implantology",
-    description: "Advanced permanent tooth replacement using modern titanium or ceramic posts for a natural look and feel.",
-    icon: Scan,
-    highlights: ["Single Tooth", "Full Mouth", "Bone Grafting"]
+    highlights: ["Checkups", "Cleanings", "Fillings"]
   },
   {
     title: "Cosmetic Dentistry",
-    description: "Smile makeovers with professional teeth whitening, bleaching, dental ceramics, and aesthetic contouring.",
-    icon: Activity,
-    highlights: ["Whitening", "Veneers", "Bleaching"]
+    description: "Smile makeovers with professional teeth whitening, veneers, and aesthetic contouring.",
+    icon: Smile,
+    highlights: ["Whitening", "Veneers", "Smile Makeover"]
   },
   {
     title: "Orthodontics",
-    description: "Corrective alignment procedures for children and adults using modern braces and clear aligner systems.",
-    icon: Smile,
-    highlights: ["Braces", "Clear Aligners", "Invisalign"]
+    description: "Corrective alignment procedures for malocclusions using modern braces and clear aligner systems.",
+    icon: Activity,
+    highlights: ["Braces", "Clear Aligners", "Malocclusion"]
   },
   {
-    title: "Paedodontics",
+    title: "Root Canal Treatment",
+    description: "Painless endodontic therapy to save native teeth, eliminating infection and preserving natural structure.",
+    icon: Microscope,
+    highlights: ["Painless RCT", "Endodontics", "Pulp Therapy"]
+  },
+  {
+    title: "Dental Implants",
+    description: "Permanent bio-compatible replacements for missing teeth with a natural look and feel.",
+    icon: Scan,
+    highlights: ["Single Tooth", "Full Mouth", "Bio-compatible"]
+  },
+  {
+    title: "Crowns & Bridges",
+    description: "Durable prosthetic restorations for damaged or missing teeth, restoring function and aesthetics.",
+    icon: ShieldCheck,
+    highlights: ["Crowns", "Bridges", "Restorations"]
+  },
+  {
+    title: "Gum Treatments",
+    description: "Advanced periodontal therapy for soft-tissue health, including scaling, polishing, and gum disease care.",
+    icon: HeartPulse,
+    highlights: ["Periodontics", "Scaling", "Polishing"]
+  },
+  {
+    title: "Pediatric Dentistry",
     description: "Gentle, specialized dental care designed specifically for children's oral health and preventive needs.",
     icon: Baby,
     highlights: ["Child Friendly", "Fluoride", "Prevention"]
   },
   {
-    title: "Oral Surgery",
-    description: "Expert surgical interventions from routine extractions to complex maxillofacial procedures.",
+    title: "Wisdom Tooth Extraction",
+    description: "Safe surgical removal of wisdom teeth to prevent crowding, infection, and long-term complications.",
     icon: Scissors,
-    highlights: ["Extractions", "Wisdom Teeth", "Surgery"]
+    highlights: ["Surgical Removal", "Crowding", "Infection"]
   },
   {
-    title: "Periodontics",
-    description: "Comprehensive care for gums and supporting structures, including bleeding gum and gum disease treatments.",
-    icon: ShieldCheck,
-    highlights: ["Gum Health", "Scaling", "Polishing"]
-  },
-  {
-    title: "General Dentistry",
-    description: "Routine oral health maintenance including professional extractions, fillings, and dental cleanings.",
-    icon: Syringe,
-    highlights: ["Extractions", "Fillings", "Scaling"]
-  },
-  {
-    title: "Diagnostics",
-    description: "In-house dental X-ray services and comprehensive specialist consultations for accurate treatment plans.",
+    title: "Diagnostics & Consultation",
+    description: "In-house digital X-ray services and comprehensive specialist consultations for accurate treatment plans.",
     icon: ClipboardList,
     highlights: ["Digital X-Ray", "Consultation", "Planning"]
   }
@@ -99,9 +99,9 @@ export default function Specialties() {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground leading-relaxed"
           >
-            Guided by Dr. Bijo Kurian and Dr. Thara Maria Joseph, we provide a 
-            comprehensive spectrum of 10 advanced dental specialties focused on 
-            painless, patient-centric excellence.
+            Led by Dr. Abhijit Sajo Sebastian, we provide a comprehensive spectrum of 
+            10 advanced dental specialties focused on painless, patient-centric excellence 
+            in Pala, Kottayam.
           </motion.p>
         </div>
 
@@ -144,12 +144,12 @@ export default function Specialties() {
               <HeartPulse className="w-10 h-10" />
             </div>
             <div>
-              <h3 className="text-2xl font-serif mb-2">Emergency Care</h3>
+              <h3 className="text-2xl font-serif mb-2">Emergency Dental Care</h3>
               <p className="text-white/80 mb-6 leading-relaxed max-w-lg">
-                Acute dental trauma or sudden-onset pain? Our specialists provide responsive emergency support during clinic working hours.
+                Immediate diagnostics for acute pain or trauma. Our team provides responsive emergency support during clinic working hours.
               </p>
               <a 
-                href="tel:08071909299" 
+                href="tel:+918156822525" 
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary rounded-full font-bold hover:bg-secondary transition-all shadow-lg"
               >
                 Call for Emergency

@@ -24,22 +24,21 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Premium Dental Care in Kuravilangad
+            Comprehensive Dental Care in Pala, Kottayam
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif text-foreground leading-[1.1] mb-6 sm:mb-8">
-            Every smile. <br />
-            <span className="text-primary italic">Carefully</span> restored.
+            Your smile. <br />
+            <span className="text-primary italic">Our priority.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 leading-relaxed max-w-lg">
-            A boutique dental experience in the heart of Central Junction. 
-            Blending specialist expertise with a warm, clinical excellence.
+            At Virtue Dental Clinic, we offer comprehensive dental care with a commitment to excellence. Expert team led by Dr. Abhijit Sajo Sebastian, ensuring personalized, painless, high-quality treatments.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
-              href="https://wa.me/918071909299" 
+              href="https://wa.me/+918156822525" 
               className="px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition-all text-center shadow-lg shadow-primary/20"
             >
               Book Consultation
@@ -98,8 +97,8 @@ export default function Hero() {
                 <MapPin className="text-primary w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <div className="font-bold text-sm sm:text-base">Central Junction</div>
-                <div className="text-[10px] sm:text-sm text-muted-foreground">Kuravilangad, Kottayam</div>
+                <div className="font-bold text-sm sm:text-base">Pala Bypass Road</div>
+                <div className="text-[10px] sm:text-sm text-muted-foreground">Pala, Kottayam, Kerala</div>
               </div>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
@@ -108,7 +107,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="font-bold text-sm sm:text-base">Mon - Sat</div>
-                <div className="text-[10px] sm:text-sm text-muted-foreground">09:00 AM - 07:00 PM</div>
+                <div className="text-[10px] sm:text-sm text-muted-foreground">10:00 AM - 07:00 PM</div>
               </div>
             </div>
           </motion.div>

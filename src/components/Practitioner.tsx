@@ -1,40 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, GraduationCap, CheckCircle, Star, Quote, Instagram } from "lucide-react";
+import { Award, GraduationCap, Star, Quote, Instagram } from "lucide-react";
 import Link from "next/link";
 
 const doctors = [
   {
-    name: "Dr. Bijo Kurian",
-    role: "Co-founder & Chief Dental Surgeon",
-    qualifications: "BDS, MDS (Conservative Dentistry & Endodontics)",
-    specialization: "Endodontics, Cosmetic & Conservative Dentistry",
-    details: "MDS from NITTE University. Specialist in rotary endodontics, microscopic procedures, and biomimetic restorations. Awarded for best research papers in national conferences.",
-    memberships: ["IDA", "CAESOK", "IACDE"],
-    image: "/images/gallery/dr.bijo kurian.webp",
-    instagram: "https://www.instagram.com/bijo__kurian?igsh=MThqNm1kYmg1aWZobQ==",
-    quote: "Painless treatment is not just a promise, it's our clinical standard."
-  },
-  {
-    name: "Dr. Thara Maria Joseph",
-    role: "Co-founder & Lead Prosthodontist",
-    qualifications: "BDS",
-    specialization: "Prosthodontics, Implantology, Endodontics",
-    details: "Alumna of Govt. Dental College Trivandrum (2012). 14 years of clinical mastery in complex restorations and patient-centric healthcare. Reg No. 11153.",
-    memberships: ["KSDC Reg. 11153"],
-    image: "https://images.unsplash.com/photo-1559839734-2b71f1e59816?q=80&w=2070&auto=format&fit=crop",
-    quote: "I am dedicated to simplifying complicated healthcare for every patient."
-  },
-  {
-    name: "Dr. Rahul",
-    role: "Associate Dentist",
-    qualifications: "BDS",
-    specialization: "General Dentistry & Patient Care",
-    details: "Renowned for professional behavior and gentle patient interactions. Specializes in making patients feel comfortable through every step of their treatment.",
-    memberships: [],
+    name: "Dr. Abhijit Sajo Sebastian",
+    role: "Chief Dental Surgeon & Endodontist",
+    qualifications: "BDS (2017), MDS — Conservative Dentistry & Endodontics (2022)",
+    specialization: "Endodontics, Restorative Dentistry, CBCT Research",
+    details: "BDS from AECS Maaruti College of Dental Sciences, Bengaluru (2017). MDS from KLE V.K. Institute of Dental Sciences, Belagavi (2022). Active researcher in modern endodontics with published work on dental file systems and canal shaping using CBCT. Reg. No. 33030, Kerala State Dental Council.",
+    memberships: ["KSDC Reg. 33030", "KLE V.K. IDS Alumni"],
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop",
-    quote: "Ensuring patient comfort is my primary goal in every procedure."
+    instagram: null,
+    quote: "Painless, precise endodontics — saving your natural teeth is always the first priority."
   }
 ];
 
@@ -59,8 +39,8 @@ export default function Practitioner() {
             transition={{ delay: 0.1 }}
             className="text-4xl lg:text-5xl font-serif text-foreground mb-6"
           >
-            Founded in 2017. <br />
-            <span className="italic text-primary">Driven by Expertise.</span>
+            Specialist-led. <br />
+            <span className="italic text-primary">Research-driven.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -69,12 +49,14 @@ export default function Practitioner() {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground"
           >
-            Holy Family Dental Care was established in February 2017 by Dr. Bijo Kurian 
-            and Dr. Thara Maria Joseph to bring world-class specialist dentistry to Kuravilangad.
+            Virtue Dental Clinic is led by Dr. Abhijit Sajo Sebastian, a specialist in 
+            Conservative Dentistry & Endodontics, bringing post-graduate expertise and 
+            published research to every patient in Pala.
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 sm:gap-12">
+        {/* Single doctor — centered, wider card */}
+        <div className="max-w-4xl mx-auto">
           {doctors.map((doc, index) => (
             <motion.div
               key={doc.name}
@@ -82,38 +64,27 @@ export default function Practitioner() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group"
+              className="group grid md:grid-cols-2 gap-10 items-center"
             >
-              <div className="relative aspect-[3/4] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden mb-6 sm:mb-8 shadow-2xl">
+              <div className="relative aspect-[3/4] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl">
                 <img 
                   src={doc.image} 
                   alt={doc.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
-                {/* Social Overlay for Instagram */}
-                {doc.instagram && (
-                  <Link 
-                    href={doc.instagram}
-                    target="_blank"
-                    className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:border-primary"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </Link>
-                )}
 
                 <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
                   <div className="flex items-center gap-2 mb-2">
                     <Star className="w-4 h-4 text-accent fill-accent" />
-                    <span className="text-white/80 text-[10px] font-bold uppercase tracking-widest">Specialist</span>
+                    <span className="text-white/80 text-[10px] font-bold uppercase tracking-widest">MDS Specialist</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-serif text-white">{doc.name}</h3>
                   <p className="text-white/60 text-xs sm:text-sm font-medium">{doc.role}</p>
                 </div>
               </div>
 
-              <div className="space-y-4 sm:space-y-6 px-2 sm:px-4">
+              <div className="space-y-6 px-2">
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="text-primary w-5 h-5" />
@@ -124,19 +95,26 @@ export default function Practitioner() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {doc.details}
                 </p>
 
-                {doc.memberships.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
-                    {doc.memberships.map(m => (
-                      <span key={m} className="px-3 py-1 bg-muted rounded-full text-[10px] font-bold text-muted-foreground uppercase tracking-tight border border-border">
-                        {m}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <div className="flex flex-wrap gap-2">
+                  {doc.memberships.map(m => (
+                    <span key={m} className="px-3 py-1 bg-muted rounded-full text-[10px] font-bold text-muted-foreground uppercase tracking-tight border border-border">
+                      {m}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Visiting roles */}
+                <div className="p-4 bg-primary/5 border border-primary/10 rounded-2xl">
+                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Also Visiting At</p>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>Holy Family Dentcare, Kozhuvanal</li>
+                    <li>Mercy Hospital, Pothy</li>
+                  </ul>
+                </div>
 
                 <div className="pt-6 border-t border-border relative">
                   <Quote className="absolute -top-3 -left-2 w-6 h-6 text-primary/10 rotate-180" />

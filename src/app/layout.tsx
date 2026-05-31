@@ -18,9 +18,18 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Holy Family Dental Care | Specialist Care in Kuravilangad",
-  description: "Experience premium dental care at Holy Family Dental Care, Kuravilangad. Led by Dr. Thara Maria Joseph, we specialize in Prosthodontics, Endodontics, and Implantology.",
-  keywords: "Dental Clinic Kuravilangad, Dentist Kottayam, Dr. Thara Maria Joseph, Root Canal Treatment Kerala, Dental Implants Kottayam, Prosthodontics Kuravilangad",
+  title: "VIRTUE Dental Clinic – Your Smile, Our Priority!",
+  description: "Comprehensive dental care in Pala, Kottayam led by Dr. Abhijit Sajo Sebastian BDS MDS. General, cosmetic, orthodontic & emergency dentistry.",
+  keywords: "Dental Clinic Pala, Dentist Kottayam, Dr. Abhijit Sajo Sebastian, Root Canal Treatment Kerala, Dental Implants Kottayam, Endodontics Pala",
+  metadataBase: new URL("https://nfc.dgtechsoln.com/virtue-dental-clinic/"),
+  alternates: {
+    canonical: "https://nfc.dgtechsoln.com/virtue-dental-clinic/",
+  },
+  openGraph: {
+    title: "VIRTUE Dental Clinic – Your Smile, Our Priority!",
+    description: "Expert dental care in Pala, Kottayam. Led by Dr. Abhijit Sajo Sebastian BDS MDS.",
+    url: "https://nfc.dgtechsoln.com/virtue-dental-clinic/",
+  },
 };
 
 export default function RootLayout({

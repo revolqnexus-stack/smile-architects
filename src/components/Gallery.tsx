@@ -31,10 +31,10 @@ const galleryItems = {
     { label: 'Crowding Correction', desc: 'Alignment Progress', src: '/images/gallery/crowding.jpg' },
   ],
   facility: [
-    { label: 'Holy Family Dental', desc: 'Clinic Exterior', src: '/images/gallery/holy family.jpg' },
+    { label: 'Virtue Dental Clinic', desc: 'Clinic — Pala Bypass Road', src: '/images/gallery/holy family.jpg' },
   ],
   team: [
-    { label: 'Dr. Bijo Kurian', desc: 'Chief Endodontist', src: '/images/gallery/dr.bijo kurian.webp' },
+    { label: 'Dr. Abhijit Sajo Sebastian', desc: 'Chief Endodontist', src: '/images/gallery/dr.bijo kurian.webp' },
   ],
 };
 
@@ -142,7 +142,7 @@ export default function Gallery() {
           <div className="flex-1 z-10">
             <h3 className="text-3xl sm:text-4xl font-serif mb-6">Patient Stories. <br /><span className="text-primary italic">Transformations in Motion.</span></h3>
             <p className="text-white/60 mb-8 leading-relaxed max-w-lg">
-              Watch our latest clinical reels showcasing the precision and artistry behind every smile we restore at Holy Family Dental Care.
+              Watch our latest clinical reels showcasing the precision and artistry behind every smile we restore at Virtue Dental Clinic.
             </p>
             <div className="flex gap-4">
                <button className="px-8 py-4 bg-primary text-white rounded-full font-bold flex items-center gap-2 hover:bg-primary/90 transition-all">
