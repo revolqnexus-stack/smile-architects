@@ -2,6 +2,7 @@ import type { Metadata } from "next";
  import { DM_Sans, DM_Mono, Cormorant_Garamond } from "next/font/google"; 
  import "./globals.css"; 
  import LoadingScreen from "@/components/LoadingScreen"; 
+ import CustomCursor from "@/components/CustomCursor"; 
   
  const dmSans = DM_Sans({ 
    variable: "--font-geist-sans", 
@@ -44,6 +45,7 @@ import type { Metadata } from "next";
        className={`${dmSans.variable} ${dmMono.variable} ${cormorant.variable} h-full antialiased`} 
      > 
        <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-accent/20 selection:text-foreground"> 
+         <CustomCursor /> 
          <LoadingScreen /> 
          {children} 
        </body> 

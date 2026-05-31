@@ -3,25 +3,30 @@
  @layer base { 
    :root { 
      --background: #FFFFFF; 
-     --foreground: #111827; 
+     --foreground: #2C3E50; 
      --card: #FFFFFF; 
-     --card-foreground: #111827; 
+     --card-foreground: #2C3E50; 
      --popover: #FFFFFF; 
-     --popover-foreground: #111827; 
+     --popover-foreground: #2C3E50; 
      --primary: #1E4D2B; 
      --primary-foreground: #FFFFFF; 
-     --secondary: #1E4D2B; 
-     --secondary-foreground: #FFFFFF; 
-     --muted: #F3F4F6; 
-     --muted-foreground: #6B7280; 
-     --accent: #1E4D2B; 
-     --accent-foreground: #FFFFFF; 
+     --secondary: #D4AF37; 
+     --secondary-foreground: #1E4D2B; 
+     --muted: #F8F9FA; 
+     --muted-foreground: #6C757D; 
+     --accent: #D4AF37; 
+     --accent-foreground: #1E4D2B; 
      --destructive: #DC2626; 
      --destructive-foreground: #FFFFFF; 
-     --border: #E5E7EB; 
-     --input: #E5E7EB; 
+     --border: rgba(212, 175, 55, 0.2); 
+     --input: rgba(212, 175, 55, 0.2); 
      --ring: #1E4D2B; 
      --radius: 0.625rem; 
+
+     /* New palette variables */
+     --navy: #2C3E50;
+     --gold: #D4AF37;
+     --gold-light: #F4D03F;
    } 
  } 
 
@@ -37,6 +42,9 @@
    --color-accent: var(--accent); 
    --color-accent-foreground: var(--accent-foreground); 
    --color-border: var(--border); 
+   --color-navy: var(--navy);
+   --color-gold: var(--gold);
+   --color-gold-light: var(--gold-light);
    --font-sans: var(--font-geist-sans); 
    --font-mono: var(--font-geist-mono); 
    --font-serif: "Playfair Display", serif; 
@@ -45,6 +53,7 @@
  @layer utilities { 
    .no-scrollbar::-webkit-scrollbar { display: none; } 
    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; } 
+   .text-balance { text-wrap: balance; }
  } 
 
  html { scroll-behavior: smooth; } 
@@ -56,6 +65,39 @@
    -webkit-font-smoothing: antialiased; 
    -moz-osx-font-smoothing: grayscale; 
    overflow-x: hidden; 
+   cursor: none;
+ } 
+
+ /* Grain texture overlay */ 
+ body::before { 
+   content: ''; 
+   position: fixed; 
+   top: 0; 
+   left: 0; 
+   width: 100%; 
+   height: 100%; 
+   pointer-events: none; 
+   z-index: 9999; 
+   opacity: 0.02; 
+   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); 
+ } 
+
+ /* Hide default cursor */ 
+ * { 
+   cursor: none !important; 
+ } 
+
+ /* Mobile: show default cursor */ 
+ @media (max-width: 768px) { 
+   body { 
+     cursor: auto; 
+   } 
+   * { 
+     cursor: auto !important; 
+   } 
+   body::before { 
+     display: none; 
+   } 
  } 
 
  h1, h2, h3, h4, h5, h6 { 
