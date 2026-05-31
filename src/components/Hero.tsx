@@ -84,7 +84,7 @@ export default function Hero() {
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="group flex items-center justify-center gap-3 px-10 py-5 clay-button text-white rounded-full font-bold shadow-xl shadow-primary/20 transition-all duration-500"
+                  className="group flex items-center justify-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold shadow-xl shadow-primary/10 transition-all duration-500"
                 >
                   Book Consultation
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -93,7 +93,7 @@ export default function Hero() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#specialties"
-                  className="flex items-center justify-center gap-2 px-10 py-5 clay-card !rounded-full !shadow-sm border border-white/50 text-foreground font-bold transition-all duration-500"
+                  className="flex items-center justify-center gap-2 px-10 py-5 bg-white border border-primary/10 text-primary rounded-full font-bold shadow-sm transition-all duration-500 hover:bg-primary/5"
                 >
                   View Specialties
                 </Link>
@@ -136,7 +136,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1 + i * 0.15 }}
-                    className="clay-card flex items-center gap-2.5 px-4 py-2 rounded-2xl text-[10px] font-bold text-foreground uppercase tracking-widest !shadow-sm border-white/40"
+                    className="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white/90 backdrop-blur-md text-[10px] font-bold text-primary uppercase tracking-widest shadow-lg shadow-black/5 border border-white/50"
                   >
                     <Icon className="w-3.5 h-3.5 text-primary" />
                     {text}
@@ -150,24 +150,24 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40, x: 30 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-              className="absolute -bottom-8 -right-4 sm:-right-10 clay-card p-6 rounded-[2.5rem] max-w-[240px] border-white/60 animate-float"
+              className="absolute -bottom-8 -right-4 sm:-right-10 bg-white p-6 rounded-[2.5rem] max-w-[240px] shadow-2xl shadow-primary/10 border border-primary/5 animate-float"
             >
               <div className="flex items-center gap-4 mb-5">
-                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none border-primary/10">
+                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
                   <MapPin className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-foreground leading-tight">Pala Town</div>
-                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Kattakkayam Road</div>
+                  <div className="font-bold text-sm text-foreground leading-tight tracking-tight">Pala Town</div>
+                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-1">Kattakkayam Road</div>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none border-primary/10">
+                <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
                   <Clock className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-foreground leading-tight">Mon – Sat</div>
-                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">09:30 AM – 8:00 PM</div>
+                  <div className="font-bold text-sm text-foreground leading-tight tracking-tight">Mon – Sat</div>
+                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-1">09:30 AM – 8:00 PM</div>
                 </div>
               </div>
             </motion.div>

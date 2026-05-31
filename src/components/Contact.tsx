@@ -87,7 +87,7 @@ export default function Contact() {
                   transition={{ delay: i * 0.1 }}
                   className="flex gap-6"
                 >
-                  <div className="w-14 h-14 rounded-2xl clay-card flex items-center justify-center flex-shrink-0 !shadow-sm">
+                  <div className="w-14 h-14 rounded-2xl bg-white shadow-xl shadow-primary/5 border border-primary/5 flex items-center justify-center flex-shrink-0">
                     <Icon className="text-primary w-6 h-6" />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="lg:col-span-7 clay-card p-12 sm:p-20 relative overflow-hidden border-white/60"
+            className="lg:col-span-7 bg-white p-12 sm:p-20 relative overflow-hidden rounded-[3.5rem] shadow-2xl shadow-primary/5 border border-primary/5"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-primary/3 rounded-bl-[8rem] pointer-events-none" />
 
@@ -143,7 +143,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="Enter full name"
-                    className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
                 <div className="space-y-3">
@@ -151,7 +151,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
               <div className="space-y-3">
                 <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Treatment of Interest</label>
                 <div className="relative">
-                  <select className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
+                  <select className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
                     <option>Orthodontic Braces</option>
                     <option>Clear Aligners / Invisalign</option>
                     <option>Digital Smile Designing</option>
@@ -168,7 +168,7 @@ export default function Contact() {
                     <option>Cosmetic Veneers</option>
                     <option>Wisdom Tooth Extraction</option>
                   </select>
-                  <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
+                  <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none opacity-40 text-primary">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function Contact() {
                 <textarea
                   rows={4}
                   placeholder="Describe your requirements for our specialist..."
-                  className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
+                  className="w-full px-8 py-5 bg-[#FDF5E6]/30 border border-primary/10 rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
                 />
               </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-6 clay-button text-white rounded-[1.5rem] font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-4 group shadow-xl shadow-primary/20"
+                className="w-full py-6 bg-primary text-white rounded-[1.5rem] font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-4 group shadow-xl shadow-primary/20"
               >
                 Submit Clinical Inquiry
                 <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

@@ -45,53 +45,56 @@ export default function Navbar() {
           style={{ boxShadow: `0 4px 30px rgba(0,0,0,${shadowOpacity})` }}
         />
 
-        <div className="relative container mx-auto px-6 py-2 flex items-center justify-between">
+        <div className="relative container mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <motion.div
-              whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
-              whileTap={{ scale: 0.96 }}
-              className="relative w-60 h-60 -my-12"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative w-12 h-12 mr-3"
             >
               <Image
                 src="/logo.png"
                 alt="Smile Architects Dental Clinic Logo"
                 fill
-                sizes="240px"
-                className="object-contain drop-shadow-[0_8px_24px_rgba(30,77,43,0.12)]"
+                sizes="48px"
+                className="object-contain drop-shadow-sm"
                 priority
               />
             </motion.div>
+            <div className="flex flex-col">
+              <span className="font-serif text-lg font-bold tracking-[0.1em] leading-none text-primary">SMILE ARCHITECTS</span>
+              <span className="text-[8px] uppercase tracking-[0.3em] font-bold text-[#D4AF37]">Advanced Dental Care</span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="relative text-sm font-medium py-1 group"
+                className="relative text-[13px] font-bold uppercase tracking-widest py-1 group"
               >
-                <span className={`transition-colors duration-200 ${activeSection === item.toLowerCase() ? 'text-primary' : 'text-foreground/60 hover:text-foreground'}`}>
+                <span className={`transition-colors duration-200 ${activeSection === item.toLowerCase() ? 'text-primary' : 'text-foreground/50 hover:text-foreground'}`}>
                   {item}
                 </span>
                 <motion.span
-                  className="absolute -bottom-0.5 left-0 h-px bg-primary rounded-full"
+                  className="absolute -bottom-1 left-0 h-[1.5px] bg-primary rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: activeSection === item.toLowerCase() ? '100%' : 0 }}
                   transition={{ duration: 0.3 }}
                 />
-                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-primary/40 rounded-full transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
           {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-4">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="tel:+919447125344"
-                className="flex items-center gap-2 px-4 py-2 clay-card !rounded-full !shadow-sm border border-primary/25 text-primary text-sm font-medium hover:bg-primary/5 transition-colors"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/20 text-primary text-[11px] font-bold uppercase tracking-widest hover:bg-primary/5 transition-all"
               >
                 <Phone className="w-3.5 h-3.5" /> Call Us
               </Link>
@@ -100,7 +103,7 @@ export default function Navbar() {
               <Link
                 href="https://wa.me/919447125344"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-2.5 clay-button text-white text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all rounded-full"
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white text-[11px] font-bold uppercase tracking-widest shadow-lg shadow-primary/10 transition-all"
               >
                 <MessageCircle className="w-4 h-4 fill-current" /> Consult Now
               </Link>

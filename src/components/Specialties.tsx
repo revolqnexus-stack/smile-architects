@@ -77,19 +77,19 @@ export default function Specialties() {
               whileInView="show"
               viewport={{ once: true, margin: "-40px" }}
               whileHover={{ y: -10, transition: { duration: 0.4, ease: "easeOut" } }}
-              className={`group clay-card p-10 flex flex-col cursor-default transition-all duration-500 border-white/60 ${spec.featured ? 'ring-1 ring-primary/10' : ''}`}
+              className={`group bg-white p-10 flex flex-col cursor-default transition-all duration-500 rounded-[2.5rem] border border-primary/5 shadow-xl shadow-primary/5 ${spec.featured ? 'ring-1 ring-primary/20' : ''}`}
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 clay-button ${spec.featured ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-primary group-hover:bg-primary group-hover:text-white border-white/50'}`}>
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 ${spec.featured ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white border border-primary/10'}`}>
                 <spec.icon className="w-6 h-6" />
               </div>
               {spec.featured && (
-                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Signature Care</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#D4AF37] mb-4 block">Signature Care</span>
               )}
               <h3 className="text-2xl font-serif text-foreground mb-4 leading-tight tracking-tight">{spec.title}</h3>
               <p className="text-sm text-muted-foreground/90 leading-relaxed flex-1 mb-8 font-medium tracking-tight">{spec.description}</p>
               <div className="flex flex-wrap gap-2.5">
                 {spec.highlights.map(tag => (
-                  <span key={tag} className="px-3 py-1.5 clay-card !rounded-full !bg-primary/5 text-primary text-[8px] font-bold uppercase tracking-[0.15em] !shadow-none !border-none">
+                  <span key={tag} className="px-3 py-1.5 bg-primary/5 rounded-full text-primary text-[8px] font-bold uppercase tracking-[0.15em]">
                     {tag}
                   </span>
                 ))}
@@ -104,13 +104,13 @@ export default function Specialties() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="xl:col-span-2 clay-card-primary p-12 flex flex-col sm:flex-row items-center gap-12 relative overflow-hidden group"
+            className="xl:col-span-2 bg-primary p-12 flex flex-col sm:flex-row items-center gap-12 relative overflow-hidden group rounded-[3rem] shadow-2xl shadow-primary/20"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
             <motion.div
               animate={{ scale: [1, 1.08, 1], opacity: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="w-24 h-24 rounded-full clay-button !bg-white/10 flex items-center justify-center flex-shrink-0 border-white/20 shadow-2xl shadow-black/20"
+              className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 border border-white/20 shadow-2xl shadow-black/10"
             >
               <HeartPulse className="w-10 h-10 text-white" />
             </motion.div>
@@ -123,7 +123,7 @@ export default function Specialties() {
                 href="tel:+919447125344"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.96 }}
-                className="inline-flex items-center gap-3 px-10 py-4 clay-card !bg-white !text-primary rounded-full font-bold text-sm shadow-xl !border-none transition-all duration-300"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary rounded-full font-bold text-sm shadow-xl transition-all duration-300 hover:bg-[#FDF5E6]"
               >
                 <Phone className="w-4 h-4" /> Direct Consultation
               </motion.a>

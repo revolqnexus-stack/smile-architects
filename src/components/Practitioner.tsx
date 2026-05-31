@@ -60,7 +60,7 @@ export default function Practitioner() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="grid md:grid-cols-12 gap-0 clay-card overflow-hidden !border-none"
+            className="grid md:grid-cols-12 gap-0 bg-white rounded-[3rem] overflow-hidden shadow-2xl shadow-primary/5 border border-primary/5"
           >
             {/* Image — 5 cols */}
             <div className="md:col-span-5 relative min-h-[500px] md:min-h-0">
@@ -74,29 +74,29 @@ export default function Practitioner() {
               {/* Name overlay */}
               <div className="absolute bottom-10 left-10 right-10 md:hidden">
                 <div className="flex items-center gap-2.5 mb-2">
-                  <Star className="w-4 h-4 text-accent fill-accent" />
+                  <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
                   <span className="text-white/80 text-[10px] font-bold uppercase tracking-widest">MDS Orthodontist</span>
                 </div>
                 <h3 className="text-3xl font-serif text-white mb-1">Dr. Jeo Tom Charls</h3>
                 <p className="text-white/60 text-sm font-medium">Chief Dental Surgeon & Orthodontist</p>
               </div>
 
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: -20 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="absolute top-10 left-10 clay-card px-6 py-4 rounded-2xl flex items-center gap-4 !shadow-xl border-white/60"
-            >
-              <div className="w-11 h-11 rounded-xl clay-button !bg-primary/5 flex items-center justify-center !shadow-none border-primary/10">
-                <Award className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <div className="text-[9px] font-bold text-primary uppercase tracking-widest">Experience</div>
-                <div className="text-sm font-bold text-foreground">15+ Clinical Years</div>
-              </div>
-            </motion.div>
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: -20 }}
+                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="absolute top-10 left-10 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl flex items-center gap-4 shadow-2xl shadow-black/10 border border-white/50"
+              >
+                <div className="w-11 h-11 rounded-xl bg-primary/5 flex items-center justify-center border border-primary/10">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="text-[9px] font-bold text-primary uppercase tracking-widest">Experience</div>
+                  <div className="text-sm font-bold text-foreground">15+ Clinical Years</div>
+                </div>
+              </motion.div>
             </div>
 
             {/* Content — 7 cols */}
@@ -104,8 +104,8 @@ export default function Practitioner() {
               {/* Desktop name */}
               <div className="hidden md:block mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <Star className="w-5 h-5 text-accent fill-accent" />
-                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Elite Clinical Specialist</span>
+                  <Star className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
+                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#D4AF37]">Elite Clinical Specialist</span>
                 </div>
                 <h3 className="text-4xl lg:text-5xl font-serif text-foreground mb-2 tracking-tight">Dr. Jeo Tom Charls</h3>
                 <p className="text-muted-foreground/80 text-lg font-medium">Chief Dental Surgeon & Orthodontist</p>
@@ -122,7 +122,7 @@ export default function Practitioner() {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex gap-5 items-start"
                   >
-                    <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
+                    <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/10">
                       <GraduationCap className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -134,9 +134,9 @@ export default function Practitioner() {
               </div>
 
               {/* Visiting */}
-              <div className="p-6 clay-card !rounded-[2rem] mb-12 !shadow-sm !bg-muted/40">
+              <div className="p-6 bg-[#FDF5E6]/50 rounded-[2rem] border border-primary/5 mb-12">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
-                  <MapPin className="w-3.5 h-3.5" /> Institutional Affiliations
+                  <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" /> Institutional Affiliations
                 </p>
                 <ul className="space-y-3">
                   {visiting.map(v => (
