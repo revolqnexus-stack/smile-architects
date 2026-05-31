@@ -91,7 +91,7 @@ export default function Navbar() {
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
                 href="tel:+919447125344"
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-primary/25 text-primary text-sm font-medium hover:bg-primary/5 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 clay-card !rounded-full !shadow-sm border border-primary/25 text-primary text-sm font-medium hover:bg-primary/5 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" /> Call Us
               </Link>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link
                 href="https://wa.me/919447125344"
                 target="_blank"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all"
+                className="flex items-center gap-2 px-5 py-2.5 clay-button text-white text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all rounded-full"
               >
                 <MessageCircle className="w-4 h-4 fill-current" /> Consult Now
               </Link>
@@ -145,14 +145,14 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-background shadow-2xl flex flex-col"
+              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-background shadow-2xl flex flex-col clay-card !rounded-none"
             >
               <div className="flex items-center justify-between p-6 border-b border-border">
                 <span className="font-serif font-bold text-lg">Menu</span>
                 <motion.button
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-xl hover:bg-muted transition-colors"
+                  className="p-2 rounded-xl clay-card !shadow-sm !rounded-xl hover:bg-muted transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </motion.button>
@@ -181,7 +181,7 @@ export default function Navbar() {
               <div className="p-6 space-y-3 border-t border-border">
                 <Link
                   href="tel:+919447125344"
-                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-muted text-primary font-bold"
+                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl clay-card !shadow-sm text-primary font-bold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4" /> Call Specialist
@@ -189,7 +189,7 @@ export default function Navbar() {
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-primary text-white font-bold shadow-lg shadow-primary/20"
+                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl clay-button text-white font-bold shadow-lg shadow-primary/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <MessageCircle className="w-4 h-4" /> WhatsApp Booking

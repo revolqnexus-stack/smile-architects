@@ -77,9 +77,9 @@ export default function Specialties() {
               whileInView="show"
               viewport={{ once: true, margin: "-40px" }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className={`group glass-card rounded-[2.5rem] p-8 flex flex-col cursor-default transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.1)] ${spec.featured ? 'ring-1 ring-primary/20 bg-white/80' : 'bg-white/40'}`}
+              className={`group clay-card p-8 flex flex-col cursor-default transition-all duration-500 ${spec.featured ? 'ring-2 ring-primary/10' : ''}`}
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 shadow-lg ${spec.featured ? 'bg-primary text-white shadow-primary/20' : 'bg-white text-primary group-hover:bg-primary group-hover:text-white shadow-black/5 group-hover:shadow-primary/20'}`}>
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 clay-button ${spec.featured ? 'bg-primary text-white' : 'bg-white text-primary group-hover:bg-primary group-hover:text-white'}`}>
                 <spec.icon className="w-7 h-7" />
               </div>
               {spec.featured && (
@@ -89,7 +89,7 @@ export default function Specialties() {
               <p className="text-sm text-muted-foreground/90 leading-relaxed flex-1 mb-6 font-medium">{spec.description}</p>
               <div className="flex flex-wrap gap-2">
                 {spec.highlights.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-widest rounded-full border border-primary/5 group-hover:bg-primary/10 group-hover:border-primary/10 transition-colors">
+                  <span key={tag} className="px-3 py-1 clay-card !rounded-full !bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-widest !shadow-none !border-none">
                     {tag}
                   </span>
                 ))}
@@ -104,13 +104,13 @@ export default function Specialties() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="xl:col-span-2 rounded-[3rem] bg-primary p-10 flex flex-col sm:flex-row items-center gap-10 shadow-2xl shadow-primary/30 relative overflow-hidden group"
+            className="xl:col-span-2 clay-card-primary p-10 flex flex-col sm:flex-row items-center gap-10 relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
             <motion.div
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 border border-white/10"
+              className="w-20 h-20 rounded-full clay-button !bg-white/10 flex items-center justify-center flex-shrink-0"
             >
               <HeartPulse className="w-10 h-10 text-white" />
             </motion.div>
@@ -123,7 +123,7 @@ export default function Specialties() {
                 href="tel:+919447125344"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-full font-bold text-sm shadow-xl hover:bg-secondary hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 clay-button !bg-white !text-primary rounded-full font-bold text-sm shadow-xl hover:bg-secondary hover:!text-white transition-all duration-300"
               >
                 <Phone className="w-4 h-4" /> Direct Consultation
               </motion.a>

@@ -87,7 +87,7 @@ export default function Contact() {
                   transition={{ delay: i * 0.1 }}
                   className="flex gap-6"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-border/50 flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl clay-card flex items-center justify-center flex-shrink-0 !shadow-sm">
                     <Icon className="text-primary w-6 h-6" />
                   </div>
                   <div>
@@ -127,7 +127,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="lg:col-span-7 glass-card rounded-[3.5rem] p-10 sm:p-16 shadow-[0_40px_100px_rgba(0,0,0,0.08)] relative overflow-hidden border border-white/50"
+            className="lg:col-span-7 clay-card p-10 sm:p-16 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/3 rounded-bl-[6rem] pointer-events-none" />
 
@@ -143,7 +143,7 @@ export default function Contact() {
                   <input
                     type="text"
                     placeholder="Enter full name"
-                    className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
                 <div className="space-y-2.5">
@@ -151,7 +151,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
               <div className="space-y-2.5">
                 <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Treatment of Interest</label>
                 <div className="relative">
-                  <select className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
+                  <select className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
                     <option>Orthodontic Braces</option>
                     <option>Clear Aligners / Invisalign</option>
                     <option>Digital Smile Designing</option>
@@ -179,7 +179,7 @@ export default function Contact() {
                 <textarea
                   rows={4}
                   placeholder="Describe your requirements for our specialist..."
-                  className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
+                  className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
                 />
               </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 type="submit"
-                className="w-full py-5 bg-primary text-white rounded-2xl font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-3 group shadow-[0_20px_40px_rgba(0,64,37,0.2)]"
+                className="w-full py-5 clay-button text-white rounded-2xl font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-3 group shadow-[0_20px_40px_rgba(0,64,37,0.2)]"
               >
                 Submit Clinical Inquiry
                 <Send className="w-4 h-4 group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform" />

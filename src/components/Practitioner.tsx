@@ -60,7 +60,7 @@ export default function Practitioner() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="grid md:grid-cols-12 gap-0 rounded-[3.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.12)] bg-white border border-border/50"
+            className="grid md:grid-cols-12 gap-0 clay-card overflow-hidden !border-none"
           >
             {/* Image — 5 cols */}
             <div className="md:col-span-5 relative min-h-[500px] md:min-h-0">
@@ -87,9 +87,9 @@ export default function Practitioner() {
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
-                className="absolute top-10 left-10 glass-card px-5 py-3 rounded-2xl flex items-center gap-3 shadow-2xl"
+                className="absolute top-10 left-10 clay-card px-5 py-3 rounded-2xl flex items-center gap-3 !shadow-lg"
               >
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center !shadow-none">
                   <Award className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -122,7 +122,7 @@ export default function Practitioner() {
                     transition={{ delay: 0.2 + i * 0.1 }}
                     className="flex gap-5 items-start"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center flex-shrink-0 border border-primary/5">
+                    <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
                       <GraduationCap className="w-5 h-5 text-primary" />
                     </div>
                     <div>
@@ -134,7 +134,7 @@ export default function Practitioner() {
               </div>
 
               {/* Visiting */}
-              <div className="p-6 bg-muted/40 rounded-[2rem] mb-12 border border-border/30">
+              <div className="p-6 clay-card !rounded-[2rem] mb-12 !shadow-sm !bg-muted/40">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 flex items-center gap-2">
                   <MapPin className="w-3.5 h-3.5" /> Institutional Affiliations
                 </p>

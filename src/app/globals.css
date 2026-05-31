@@ -105,6 +105,53 @@
    -webkit-backdrop-filter: blur(12px); 
    border: 1px solid rgba(255, 194, 51, 0.2); 
  } 
+
+ /* ── Claymorphism ────────────────────────────────── */
+ .clay-card {
+   background: var(--card);
+   border-radius: 2.5rem;
+   box-shadow: 
+     12px 12px 24px rgba(30, 77, 43, 0.08), 
+     -12px -12px 24px rgba(255, 255, 255, 0.9),
+     inset 6px 6px 12px rgba(255, 255, 255, 0.4),
+     inset -6px -6px 12px rgba(30, 77, 43, 0.05);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+ }
+
+ .clay-card-primary {
+   background: var(--primary);
+   border-radius: 2.5rem;
+   box-shadow: 
+     12px 12px 24px rgba(30, 77, 43, 0.2), 
+     inset 6px 6px 12px rgba(255, 255, 255, 0.15),
+     inset -6px -6px 12px rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .clay-button {
+   background: var(--primary);
+   box-shadow: 
+     6px 6px 12px rgba(30, 77, 43, 0.15), 
+     inset 3px 3px 6px rgba(255, 255, 255, 0.2),
+     inset -3px -3px 6px rgba(0, 0, 0, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   transition: all 0.3s ease;
+ }
+
+ .clay-button:active {
+   box-shadow: 
+     inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+     inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+   transform: scale(0.98);
+ }
+
+ .clay-input {
+   background: #FDF5E6;
+   box-shadow: 
+     inset 4px 4px 8px rgba(30, 77, 43, 0.05),
+     inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+   border: 1px solid rgba(30, 77, 43, 0.05);
+ }
   
  /* ── Noise texture ───────────────────────────────── */ 
  .noise::after { 

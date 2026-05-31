@@ -84,7 +84,7 @@ export default function Hero() {
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="group flex items-center justify-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold shadow-2xl shadow-primary/30 hover:bg-primary/95 transition-all duration-500"
+                  className="group flex items-center justify-center gap-3 px-10 py-5 clay-button text-white rounded-full font-bold shadow-2xl shadow-primary/30 hover:bg-primary/95 transition-all duration-500"
                 >
                   Book Private Consultation
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -93,7 +93,7 @@ export default function Hero() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#specialties"
-                  className="flex items-center justify-center gap-2 px-10 py-5 border border-border text-foreground rounded-full font-bold hover:bg-secondary/10 transition-all duration-500"
+                  className="flex items-center justify-center gap-2 px-10 py-5 clay-card !rounded-full !shadow-sm border border-border text-foreground font-bold hover:bg-secondary/10 transition-all duration-500"
                 >
                   View Specialties
                 </Link>
@@ -136,7 +136,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1 + i * 0.15 }}
-                    className="glass-card flex items-center gap-2.5 px-4 py-2 rounded-full text-[11px] font-bold text-foreground uppercase tracking-wider"
+                    className="clay-card flex items-center gap-2.5 px-4 py-2 rounded-2xl text-[11px] font-bold text-foreground uppercase tracking-wider !shadow-sm"
                   >
                     <Icon className="w-4 h-4 text-primary" />
                     {text}
@@ -150,10 +150,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40, x: 30 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-              className="absolute -bottom-8 -right-4 sm:-right-10 glass-card p-6 rounded-[2rem] shadow-2xl max-w-[240px] animate-float"
+              className="absolute -bottom-8 -right-4 sm:-right-10 clay-card p-6 rounded-[2.5rem] max-w-[240px] animate-float"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 rounded-2xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
                   <MapPin className="text-primary w-5 h-5" />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 rounded-2xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
                   <Clock className="text-primary w-5 h-5" />
                 </div>
                 <div>

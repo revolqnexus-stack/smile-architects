@@ -48,7 +48,7 @@ export default function Gallery() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group relative aspect-square rounded-[2rem] overflow-hidden shadow-xl shadow-primary/5 bg-white"
+              className="group relative aspect-square rounded-[2rem] overflow-hidden clay-card bg-white"
             >
               <Image
                 src={image.src}
