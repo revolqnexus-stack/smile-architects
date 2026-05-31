@@ -122,111 +122,106 @@
              }} 
            /> 
   
-           {/* Main content */} 
-           <div className="relative flex flex-col items-center"> 
-  
-             {/* Logo as main animation */} 
-             <motion.div 
-               initial={{ scale: 0.5, opacity: 0 }} 
-               animate={{ 
-                 scale: [0.9, 1.1, 1], 
+           {/* Main content */}
+           <div className="relative flex flex-col items-center">
+
+             {/* Logo as main animation */}
+             <motion.div
+               initial={{ scale: 0.3, opacity: 0, rotateY: 180 }}
+               animate={{
+                 scale: [1, 1.15, 1],
                  opacity: 1,
-               }} 
-               transition={{ 
-                 duration: 2,
-                 repeat: Infinity,
-                 repeatType: "reverse",
-                 ease: "easeInOut"
-               }} 
-               className="relative mb-12" 
-               style={{ 
-                 width: 200, 
-                 height: 200, 
-                 borderRadius: "50%", 
-                 background: "rgba(255,255,255,0.03)", 
-                 boxShadow: "0 0 80px rgba(255,194,51,0.15), inset 0 0 20px rgba(255,194,51,0.05)", 
-                 display: "flex", 
-                 alignItems: "center", 
-                 justifyContent: "center", 
-               }} 
-             > 
-               {/* Pulsing rings around logo */}
+                 rotateY: [0, 15, -15, 0],
+                 rotateZ: [0, 5, -5, 0]
+               }}
+               transition={{
+                 opacity: { duration: 1 },
+                 scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                 rotateY: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+                 rotateZ: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+               }}
+               className="relative mb-12"
+               style={{
+                 width: 280,
+                 height: 280,
+                 display: "flex",
+                 alignItems: "center",
+                 justifyContent: "center",
+                 perspective: "1000px"
+               }}
+             >
+               {/* 3D Floor Shadow */}
                <motion.div
-                 animate={{ scale: [1, 1.4], opacity: [0.3, 0] }}
-                 transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
-                 className="absolute inset-0 rounded-full border border-[#FFC233]/30"
-               />
-               <motion.div
-                 animate={{ scale: [1, 1.8], opacity: [0.2, 0] }}
-                 transition={{ duration: 2, delay: 0.5, repeat: Infinity, ease: "easeOut" }}
-                 className="absolute inset-0 rounded-full border border-[#FFC233]/20"
+                 animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
+                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                 className="absolute -bottom-4 w-40 h-8 rounded-[100%] blur-xl"
+                 style={{ background: "radial-gradient(circle, rgba(0,0,0,0.4) 0%, transparent 70%)" }}
                />
 
-               <Image 
-                 src="/logo.png" 
-                 alt="Smile Architects Logo" 
-                 width={140} 
-                 height={140} 
-                 className="object-contain relative z-10" 
-                 priority 
-               /> 
-             </motion.div> 
-  
-             {/* SMILE wordmark */} 
-             <motion.div 
-               initial={{ opacity: 0, y: 10 }}
+               {/* Pulsing rings around logo */}
+               <motion.div
+                 animate={{ scale: [1, 2.2], opacity: [0.4, 0] }}
+                 transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
+                 className="absolute inset-0 rounded-full border-2 border-[#FFC233]/20"
+               />
+               <motion.div
+                 animate={{ scale: [1, 2.8], opacity: [0.2, 0] }}
+                 transition={{ duration: 3, delay: 1, repeat: Infinity, ease: "easeOut" }}
+                 className="absolute inset-0 rounded-full border border-[#FFC233]/10"
+               />
+
+               <Image
+                 src="/logo.png"
+                 alt="Smile Architects Logo"
+                 width={220}
+                 height={220}
+                 className="object-contain relative z-10 drop-shadow-[0_20px_50px_rgba(255,194,51,0.25)]"
+                 priority
+               />
+             </motion.div>
+
+             {/* SMILE wordmark */}
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.8, delay: 0.5 }}
+               transition={{ duration: 1, delay: 0.8 }}
                className="flex flex-col items-center"
              >
-               <h1 style={{ 
-                 fontFamily: "var(--font-serif)", 
-                 fontSize: "3rem", 
-                 fontWeight: 700, 
-                 letterSpacing: "0.25em", 
-                 color: "#f5f5f0", 
-                 lineHeight: 1, 
-                 textShadow: "0 0 30px rgba(255,194,51,0.2)", 
+               <h1 style={{
+                 fontFamily: "var(--font-serif)",
+                 fontSize: "3.5rem",
+                 fontWeight: 700,
+                 letterSpacing: "0.3em",
+                 color: "#f5f5f0",
+                 lineHeight: 1,
+                 textShadow: "0 0 40px rgba(255,194,51,0.3)",
                }}>
                  SMILE
                </h1>
-               <div style={{ 
-                 fontSize: "0.75rem", 
-                 fontWeight: 600, 
-                 textTransform: "uppercase", 
-                 color: "rgba(255,194,51,0.8)", 
-                 letterSpacing: "0.6em", 
-                 marginTop: "0.5rem"
-               }}> 
-                 Architects 
-               </div> 
+               <motion.div
+                 initial={{ width: 0 }}
+                 animate={{ width: "100%" }}
+                 transition={{ duration: 1.5, delay: 1.2 }}
+                 style={{
+                   height: "1px",
+                   background: "linear-gradient(90deg, transparent, #FFC233, transparent)",
+                   marginTop: "1rem",
+                   marginBottom: "0.5rem"
+                 }}
+               />
+               <div style={{
+                 fontSize: "0.85rem",
+                 fontWeight: 600,
+                 textTransform: "uppercase",
+                 color: "rgba(255,194,51,0.9)",
+                 letterSpacing: "0.7em",
+               }}>
+                 Architects
+               </div>
              </motion.div>
-  
-             {/* Loading bar */} 
-             <motion.div 
-               initial={{ opacity: 0 }} 
-               animate={{ opacity: 1 }} 
-               transition={{ delay: 1.2 }} 
-               className="relative overflow-hidden rounded-full mt-12" 
-               style={{ 
-                 width: 160, 
-                 height: 2, 
-                 background: "rgba(255,255,255,0.06)", 
-               }} 
-             > 
-               <motion.div 
-                 initial={{ x: "-100%" }} 
-                 animate={{ x: "0%" }} 
-                 transition={{ duration: 2.2, ease: "easeInOut" }} 
-                 className="absolute inset-0 rounded-full" 
-                 style={{ 
-                   background: "linear-gradient(90deg, transparent, #FFC233)", 
-                 }} 
-               /> 
-             </motion.div> 
-           </div> 
-         </motion.div> 
-       )} 
-     </AnimatePresence> 
-   ); 
+           </div>
+         </motion.div>
+       )}
+     </AnimatePresence>
+   );
  }
