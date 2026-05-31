@@ -19,10 +19,28 @@ const footerLinks = [
   { label: 'Location & Map', href: 'https://maps.app.goo.gl/5DS1k9PnA9vQbMU2A' },
   { label: 'Book on Practo', href: '#' },
 ];
+
+const RevolqIcon = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M6 19L6 5" />
+    <path d="M6 5L14 5C16.2091 5 18 6.79086 18 9C18 11.2091 16.2091 13 14 13L6 13" />
+    <path d="M12 13L18 19" />
+  </svg>
+);
+
 const socials = [
   { Icon: Globe, href: '#', label: 'Website' },
   { Icon: Mail, href: 'mailto:abhijitsebastian@gmail.com', label: 'Email' },
   { Icon: MessageCircle, href: 'https://wa.me/918156822525', label: 'WhatsApp' },
+  { Icon: RevolqIcon, href: 'https://revol-q.vercel.app', label: 'Revolq' },
 ];
 
 export default function Home() {
@@ -116,7 +134,18 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
-            <p>© 2026 VIRTUE Dental Clinic. All rights reserved.</p>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <p>© 2026 VIRTUE Dental Clinic. All rights reserved.</p>
+              <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-white/10" />
+              <Link 
+                href="https://revol-q.vercel.app" 
+                target="_blank"
+                className="hover:text-primary transition-colors flex items-center gap-1.5 group"
+              >
+                Powered by 
+                <span className="text-white/50 group-hover:text-primary font-bold tracking-wider transition-colors">REVOLQ</span>
+              </Link>
+            </div>
             <p>Pala Bypass Road, Vellappadu, Pala, Kottayam — 686575</p>
           </div>
         </div>
