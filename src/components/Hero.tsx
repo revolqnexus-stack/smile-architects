@@ -33,7 +33,7 @@ export default function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20">
+    <section ref={ref} className="relative min-h-[110vh] flex items-center overflow-hidden pt-40 pb-32">
       {/* Background layers */}
       <div className="absolute inset-0 hero-gradient" />
       <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[140px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
@@ -69,31 +69,31 @@ export default function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <motion.h1 variants={item} className="text-6xl sm:text-7xl lg:text-[6.5rem] font-serif text-foreground leading-[1] mb-8 tracking-tighter">
-              Sculpting <span className="italic">Smiles</span>.{" "}
-              <span className="block text-shimmer">Architecting Confidence.</span>
+            <motion.h1 variants={item} className="text-6xl sm:text-7xl lg:text-8xl font-serif text-foreground leading-[0.95] mb-8 tracking-tight">
+              Sculpting <span className="italic font-light">Smiles</span>.{" "}
+              <span className="block text-shimmer font-medium">Architecting Confidence.</span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-xl text-muted-foreground/80 leading-relaxed mb-12 max-w-lg font-medium">
-              Led by <span className="text-primary font-bold">Dr. Jeo Tom Charls</span> — MDS Orthodontist & Dentofacial Orthopedics — delivering elite dental care with precision and artistry.
+            <motion.p variants={item} className="text-lg text-muted-foreground/90 leading-relaxed mb-12 max-w-lg font-medium tracking-tight">
+              Led by <span className="text-primary font-bold">Dr. Jeo Tom Charls</span> — delivering elite orthodontic precision with an artist's touch in the heart of Pala.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-5 mb-16">
+            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-16">
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="group flex items-center justify-center gap-3 px-10 py-5 clay-button text-white rounded-full font-bold shadow-2xl shadow-primary/30 hover:bg-primary/95 transition-all duration-500"
+                  className="group flex items-center justify-center gap-3 px-10 py-5 clay-button text-white rounded-full font-bold shadow-xl shadow-primary/20 transition-all duration-500"
                 >
-                  Book Private Consultation
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                  Book Consultation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#specialties"
-                  className="flex items-center justify-center gap-2 px-10 py-5 clay-card !rounded-full !shadow-sm border border-border text-foreground font-bold hover:bg-secondary/10 transition-all duration-500"
+                  className="flex items-center justify-center gap-2 px-10 py-5 clay-card !rounded-full !shadow-sm border border-white/50 text-foreground font-bold transition-all duration-500"
                 >
                   View Specialties
                 </Link>
@@ -120,13 +120,13 @@ export default function Hero() {
             className="lg:col-span-5 relative"
           >
             {/* Main image frame */}
-            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_60px_100px_rgba(0,0,0,0.18)] ring-1 ring-primary/5">
+            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.12)] ring-1 ring-white/20">
               <img
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop"
                 alt="Smile Architects Dental Clinic"
                 className="w-full h-full object-cover scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-40" />
 
               {/* Badges overlay */}
               <div className="absolute top-8 left-8 flex flex-col gap-3">
@@ -136,9 +136,9 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1 + i * 0.15 }}
-                    className="clay-card flex items-center gap-2.5 px-4 py-2 rounded-2xl text-[11px] font-bold text-foreground uppercase tracking-wider !shadow-sm"
+                    className="clay-card flex items-center gap-2.5 px-4 py-2 rounded-2xl text-[10px] font-bold text-foreground uppercase tracking-widest !shadow-sm border-white/40"
                   >
-                    <Icon className="w-4 h-4 text-primary" />
+                    <Icon className="w-3.5 h-3.5 text-primary" />
                     {text}
                   </motion.div>
                 ))}
@@ -150,24 +150,24 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40, x: 30 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-              className="absolute -bottom-8 -right-4 sm:-right-10 clay-card p-6 rounded-[2.5rem] max-w-[240px] animate-float"
+              className="absolute -bottom-8 -right-4 sm:-right-10 clay-card p-6 rounded-[2.5rem] max-w-[240px] border-white/60 animate-float"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-11 h-11 rounded-2xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none border-primary/10">
                   <MapPin className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-foreground leading-tight">Kattakkayam Road</div>
-                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Near Federal Bank</div>
+                  <div className="font-bold text-sm text-foreground leading-tight">Pala Town</div>
+                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">Kattakkayam Road</div>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-11 h-11 rounded-2xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none">
+                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center flex-shrink-0 !shadow-none border-primary/10">
                   <Clock className="text-primary w-5 h-5" />
                 </div>
                 <div>
                   <div className="font-bold text-sm text-foreground leading-tight">Mon – Sat</div>
-                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">09:30 AM – 8:00 PM</div>
+                  <div className="text-[9px] text-muted-foreground font-bold uppercase tracking-widest mt-0.5">09:30 AM – 8:00 PM</div>
                 </div>
               </div>
             </motion.div>

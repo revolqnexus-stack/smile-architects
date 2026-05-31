@@ -51,7 +51,7 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-48 relative overflow-hidden">
       <div className="absolute inset-0 ivory-gradient" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
@@ -127,39 +127,39 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="lg:col-span-7 clay-card p-10 sm:p-16 relative overflow-hidden"
+            className="lg:col-span-7 clay-card p-12 sm:p-20 relative overflow-hidden border-white/60"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/3 rounded-bl-[6rem] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-primary/3 rounded-bl-[8rem] pointer-events-none" />
 
-            <h3 className="text-3xl sm:text-4xl font-serif text-foreground mb-3 tracking-tight">Priority Inquiry</h3>
-            <p className="text-muted-foreground/80 font-medium text-base mb-12 leading-relaxed">
+            <h3 className="text-4xl sm:text-5xl font-serif text-foreground mb-4 tracking-tight">Priority Inquiry</h3>
+            <p className="text-muted-foreground/90 font-medium text-lg mb-14 leading-relaxed tracking-tight">
               Experience the Smile Architects difference. Leave your details for a specialized clinical analysis.
             </p>
 
-            <form className="space-y-8">
-              <div className="grid sm:grid-cols-2 gap-8">
-                <div className="space-y-2.5">
-                  <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Patient Full Name</label>
+            <form className="space-y-10">
+              <div className="grid sm:grid-cols-2 gap-10">
+                <div className="space-y-3">
+                  <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Patient Full Name</label>
                   <input
                     type="text"
                     placeholder="Enter full name"
-                    className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
-                <div className="space-y-2.5">
-                  <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Primary Contact</label>
+                <div className="space-y-3">
+                  <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Primary Contact</label>
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
+                    className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2.5">
-                <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Treatment of Interest</label>
+              <div className="space-y-3">
+                <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Treatment of Interest</label>
                 <div className="relative">
-                  <select className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
+                  <select className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
                     <option>Orthodontic Braces</option>
                     <option>Clear Aligners / Invisalign</option>
                     <option>Digital Smile Designing</option>
@@ -168,29 +168,29 @@ export default function Contact() {
                     <option>Cosmetic Veneers</option>
                     <option>Wisdom Tooth Extraction</option>
                   </select>
-                  <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-2.5">
-                <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Message or Symptoms</label>
+              <div className="space-y-3">
+                <label className="text-[9px] font-bold text-primary uppercase tracking-[0.25em] ml-1">Message or Symptoms</label>
                 <textarea
                   rows={4}
                   placeholder="Describe your requirements for our specialist..."
-                  className="w-full px-6 py-4 clay-input rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
+                  className="w-full px-8 py-5 clay-input rounded-[1.5rem] focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
                 />
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-5 clay-button text-white rounded-2xl font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-3 group shadow-[0_20px_40px_rgba(0,64,37,0.2)]"
+                className="w-full py-6 clay-button text-white rounded-[1.5rem] font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-4 group shadow-xl shadow-primary/20"
               >
                 Submit Clinical Inquiry
-                <Send className="w-4 h-4 group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform" />
+                <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </motion.button>
             </form>
           </motion.div>

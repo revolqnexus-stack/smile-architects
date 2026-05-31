@@ -67,39 +67,39 @@
   
              {/* Brand col */} 
              <div className="lg:col-span-2"> 
-               <Link href="/" className="inline-block mb-7"> 
-                 <motion.div whileHover={{ scale: 1.04 }} className="relative w-28 h-28"> 
+               <Link href="/" className="inline-block mb-8"> 
+                 <motion.div whileHover={{ scale: 1.05 }} className="relative w-24 h-24"> 
                    <Image src="/logo.png" alt="Smile Architects Dental Clinic" 
-                     fill sizes="112px" className="object-contain" /> 
+                     fill sizes="96px" className="object-contain brightness-110 drop-shadow-[0_4px_12px_rgba(255,194,51,0.1)]" /> 
                  </motion.div> 
                </Link> 
   
-               <p className="leading-relaxed max-w-sm mb-2 text-sm" style={{ color: "rgba(255,255,255,0.45)" }}> 
+               <p className="leading-relaxed max-w-sm mb-4 text-sm font-medium tracking-tight" style={{ color: "rgba(255,255,255,0.5)" }}> 
                  Premier multi-specialty dental facility in Pala, Kottayam. 
-                 Led by Dr. Jeo Tom Charls — MDS Orthodontist & Dentofacial Orthopedics. 
+                 Led by Dr. Jeo Tom Charls — delivering excellence in Orthodontics & Dentofacial Orthopedics. 
                </p> 
-               <p className="text-xs mb-8" style={{ color: "rgba(255,194,51,0.5)" }}> 
-                 Kerala State Dental Council Reg. No. 9451 
+               <p className="text-[10px] font-bold uppercase tracking-[0.25em] mb-10" style={{ color: "rgba(255,194,51,0.6)" }}> 
+                 KSDC Reg. No. 9451 
                </p> 
   
-               <div className="flex gap-3"> 
+               <div className="flex gap-4"> 
                  {socials.map(({ Icon, href, label }) => ( 
                    <motion.div key={label} whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}> 
                      <Link href={href} 
                        target={href.startsWith('http') ? "_blank" : undefined} 
                        aria-label={label} 
-                       className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300" 
-                       style={{ border: "1px solid rgba(255,255,255,0.08)" }} 
+                       className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300" 
+                       style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)" }} 
                        onMouseEnter={e => { 
-                         (e.currentTarget as HTMLElement).style.background = "rgba(255,194,51,0.15)"; 
-                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,194,51,0.4)"; 
+                         (e.currentTarget as HTMLElement).style.background = "rgba(255,194,51,0.1)"; 
+                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,194,51,0.3)"; 
                        }} 
                        onMouseLeave={e => { 
-                         (e.currentTarget as HTMLElement).style.background = "transparent"; 
+                         (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.02)"; 
                          (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; 
                        }} 
                      > 
-                       <Icon className="w-4 h-4" style={{ color: "rgba(255,255,255,0.6)" }} /> 
+                       <Icon className="w-4 h-4" style={{ color: "rgba(255,255,255,0.5)" }} /> 
                      </Link> 
                    </motion.div> 
                  ))} 

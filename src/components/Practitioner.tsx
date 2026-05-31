@@ -17,7 +17,7 @@ const visiting = [
 
 export default function Practitioner() {
   return (
-    <section id="practitioner" className="py-32 relative overflow-hidden">
+    <section id="practitioner" className="py-48 relative overflow-hidden">
       <div className="absolute inset-0 bg-muted/20" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-[#FFC233]/3 blur-[160px] pointer-events-none" />
 
@@ -81,22 +81,22 @@ export default function Practitioner() {
                 <p className="text-white/60 text-sm font-medium">Chief Dental Surgeon & Orthodontist</p>
               </div>
 
-              {/* Floating badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8, x: -20 }}
-                whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="absolute top-10 left-10 clay-card px-5 py-3 rounded-2xl flex items-center gap-3 !shadow-lg"
-              >
-                <div className="w-10 h-10 rounded-xl clay-button !bg-primary/5 flex items-center justify-center !shadow-none">
-                  <Award className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="text-[10px] font-bold text-primary uppercase tracking-widest">Experience</div>
-                  <div className="text-xs font-bold text-foreground">15+ Clinical Years</div>
-                </div>
-              </motion.div>
+            {/* Floating badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, x: -20 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="absolute top-10 left-10 clay-card px-6 py-4 rounded-2xl flex items-center gap-4 !shadow-xl border-white/60"
+            >
+              <div className="w-11 h-11 rounded-xl clay-button !bg-primary/5 flex items-center justify-center !shadow-none border-primary/10">
+                <Award className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="text-[9px] font-bold text-primary uppercase tracking-widest">Experience</div>
+                <div className="text-sm font-bold text-foreground">15+ Clinical Years</div>
+              </div>
+            </motion.div>
             </div>
 
             {/* Content — 7 cols */}

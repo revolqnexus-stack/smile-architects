@@ -29,7 +29,7 @@ const cardVariants = {
 
 export default function Specialties() {
   return (
-    <section id="specialties" className="py-32 relative overflow-hidden">
+    <section id="specialties" className="py-48 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-muted/20" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -67,7 +67,7 @@ export default function Specialties() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {specialties.map((spec, i) => (
             <motion.div
               key={spec.title}
@@ -76,20 +76,20 @@ export default function Specialties() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-40px" }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className={`group clay-card p-8 flex flex-col cursor-default transition-all duration-500 ${spec.featured ? 'ring-2 ring-primary/10' : ''}`}
+              whileHover={{ y: -10, transition: { duration: 0.4, ease: "easeOut" } }}
+              className={`group clay-card p-10 flex flex-col cursor-default transition-all duration-500 border-white/60 ${spec.featured ? 'ring-1 ring-primary/10' : ''}`}
             >
-              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 clay-button ${spec.featured ? 'bg-primary text-white' : 'bg-white text-primary group-hover:bg-primary group-hover:text-white'}`}>
-                <spec.icon className="w-7 h-7" />
+              <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 clay-button ${spec.featured ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-primary group-hover:bg-primary group-hover:text-white border-white/50'}`}>
+                <spec.icon className="w-6 h-6" />
               </div>
               {spec.featured && (
-                <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-primary mb-3">Signature Specialization</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Signature Care</span>
               )}
-              <h3 className="text-xl font-serif text-foreground mb-3 leading-tight tracking-tight">{spec.title}</h3>
-              <p className="text-sm text-muted-foreground/90 leading-relaxed flex-1 mb-6 font-medium">{spec.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-2xl font-serif text-foreground mb-4 leading-tight tracking-tight">{spec.title}</h3>
+              <p className="text-sm text-muted-foreground/90 leading-relaxed flex-1 mb-8 font-medium tracking-tight">{spec.description}</p>
+              <div className="flex flex-wrap gap-2.5">
                 {spec.highlights.map(tag => (
-                  <span key={tag} className="px-3 py-1 clay-card !rounded-full !bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-widest !shadow-none !border-none">
+                  <span key={tag} className="px-3 py-1.5 clay-card !rounded-full !bg-primary/5 text-primary text-[8px] font-bold uppercase tracking-[0.15em] !shadow-none !border-none">
                     {tag}
                   </span>
                 ))}
@@ -104,26 +104,26 @@ export default function Specialties() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="xl:col-span-2 clay-card-primary p-10 flex flex-col sm:flex-row items-center gap-10 relative overflow-hidden group"
+            className="xl:col-span-2 clay-card-primary p-12 flex flex-col sm:flex-row items-center gap-12 relative overflow-hidden group"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:scale-110 transition-transform duration-1000" />
             <motion.div
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="w-20 h-20 rounded-full clay-button !bg-white/10 flex items-center justify-center flex-shrink-0"
+              animate={{ scale: [1, 1.08, 1], opacity: [0.8, 1, 0.8] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="w-24 h-24 rounded-full clay-button !bg-white/10 flex items-center justify-center flex-shrink-0 border-white/20 shadow-2xl shadow-black/20"
             >
               <HeartPulse className="w-10 h-10 text-white" />
             </motion.div>
-            <div className="relative z-10">
-              <h3 className="text-3xl font-serif text-white mb-3 tracking-tight">Tertiary Care Pathway</h3>
-              <p className="text-white/70 mb-8 text-sm leading-relaxed max-w-md font-medium">
-                Seamless referral to Mar Sleeva Medicity or Sunrise Hospital for complex orthognathic surgeries and advanced surgical infrastructure.
+            <div className="relative z-10 text-center sm:text-left">
+              <h3 className="text-4xl font-serif text-white mb-4 tracking-tight">Tertiary Care Pathway</h3>
+              <p className="text-white/80 mb-10 text-base leading-relaxed max-w-md font-medium tracking-tight">
+                Seamless referral to Mar Sleeva Medicity for complex orthognathic surgeries and advanced surgical infrastructure.
               </p>
               <motion.a
                 href="tel:+919447125344"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-3 px-8 py-4 clay-button !bg-white !text-primary rounded-full font-bold text-sm shadow-xl hover:bg-secondary hover:!text-white transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.96 }}
+                className="inline-flex items-center gap-3 px-10 py-4 clay-card !bg-white !text-primary rounded-full font-bold text-sm shadow-xl !border-none transition-all duration-300"
               >
                 <Phone className="w-4 h-4" /> Direct Consultation
               </motion.a>

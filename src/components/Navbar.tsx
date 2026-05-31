@@ -49,16 +49,16 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <motion.div
-              whileHover={{ scale: 1.08, rotate: [0, -5, 5, 0] }}
-              whileTap={{ scale: 0.95 }}
-              className="relative w-44 h-44 -my-8"
+              whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
+              whileTap={{ scale: 0.96 }}
+              className="relative w-24 h-24 -my-4"
             >
               <Image
                 src="/logo.png"
                 alt="Smile Architects Dental Clinic Logo"
                 fill
-                sizes="176px"
-                className="object-contain drop-shadow-[0_10px_20px_rgba(30,77,43,0.15)]"
+                sizes="96px"
+                className="object-contain drop-shadow-[0_4px_12px_rgba(30,77,43,0.1)]"
                 priority
               />
             </motion.div>

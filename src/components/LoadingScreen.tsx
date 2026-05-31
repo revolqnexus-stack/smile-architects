@@ -180,42 +180,43 @@
                />
              </motion.div>
 
-             {/* SMILE wordmark */}
-             <motion.div
+             {/* SMILE wordmark */} 
+             <motion.div 
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
-               transition={{ duration: 1, delay: 0.8 }}
+               transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
                className="flex flex-col items-center"
              >
-               <h1 style={{
-                 fontFamily: "var(--font-serif)",
-                 fontSize: "3.5rem",
-                 fontWeight: 700,
-                 letterSpacing: "0.3em",
-                 color: "#f5f5f0",
-                 lineHeight: 1,
-                 textShadow: "0 0 40px rgba(255,194,51,0.3)",
+               <h1 style={{ 
+                 fontFamily: "var(--font-serif)", 
+                 fontSize: "4rem", 
+                 fontWeight: 300, 
+                 letterSpacing: "0.4em", 
+                 color: "#f5f5f0", 
+                 lineHeight: 1, 
+                 textShadow: "0 0 60px rgba(255,194,51,0.2)", 
                }}>
                  SMILE
                </h1>
-               <motion.div
+               <motion.div 
                  initial={{ width: 0 }}
-                 animate={{ width: "100%" }}
-                 transition={{ duration: 1.5, delay: 1.2 }}
-                 style={{
-                   height: "1px",
-                   background: "linear-gradient(90deg, transparent, #FFC233, transparent)",
-                   marginTop: "1rem",
-                   marginBottom: "0.5rem"
+                 animate={{ width: "120%" }}
+                 transition={{ duration: 2, delay: 1.2, ease: "easeInOut" }}
+                 style={{ 
+                   height: "1px", 
+                   background: "linear-gradient(90deg, transparent, rgba(255,194,51,0.4), transparent)", 
+                   marginTop: "1.5rem",
+                   marginBottom: "0.75rem"
                  }}
                />
-               <div style={{
-                 fontSize: "0.85rem",
-                 fontWeight: 600,
-                 textTransform: "uppercase",
-                 color: "rgba(255,194,51,0.9)",
-                 letterSpacing: "0.7em",
-               }}>
+               <div style={{ 
+                 fontSize: "0.75rem", 
+                 fontWeight: 700, 
+                 textTransform: "uppercase", 
+                 color: "rgba(255,194,51,0.7)", 
+                 letterSpacing: "0.8em", 
+                 marginLeft: "0.8em"
+               }}> 
                  Architects
                </div>
              </motion.div>
