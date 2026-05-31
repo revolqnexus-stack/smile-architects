@@ -3,24 +3,24 @@
 @layer base {
   :root {
     --background: #FDFCF8;
-    --foreground: #1A1A1A;
+    --foreground: #002D1A;
     --card: #FFFFFF;
-    --card-foreground: #1A1A1A;
+    --card-foreground: #002D1A;
     --popover: #FDFCF8;
-    --popover-foreground: #1A1A1A;
-    --primary: #3D5C42;
+    --popover-foreground: #002D1A;
+    --primary: #004025;
     --primary-foreground: #FDFCF8;
-    --secondary: #EAE6DA;
-    --secondary-foreground: #3D5C42;
-    --muted: #F5F2E8;
-    --muted-foreground: #6B7280;
-    --accent: #C9A84C;
-    --accent-foreground: #FDFCF8;
+    --secondary: #1DB233;
+    --secondary-foreground: #FDFCF8;
+    --muted: #F5F7F5;
+    --muted-foreground: #4A5D4A;
+    --accent: #FFD500;
+    --accent-foreground: #004025;
     --destructive: #DC2626;
     --destructive-foreground: #FDFCF8;
-    --border: #E2DDD0;
-    --input: #E2DDD0;
-    --ring: #3D5C42;
+    --border: #E5EBE5;
+    --input: #E5EBE5;
+    --ring: #004025;
     --radius: 0.5rem;
   }
 }
@@ -60,26 +60,26 @@ body {
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); }
 
 .ivory-gradient {
-  background: linear-gradient(160deg, #FDFCF8 0%, #F0EDE3 50%, #E8E4D8 100%);
+  background: linear-gradient(160deg, #FDFCF8 0%, #F0F4F0 50%, #E8EEE8 100%);
 }
 
 .hero-gradient {
-  background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(61,92,66,0.06) 0%, transparent 70%),
-              linear-gradient(160deg, #FDFCF8 0%, #F5F2E8 100%);
+  background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,64,37,0.06) 0%, transparent 70%),
+              linear-gradient(160deg, #FDFCF8 0%, #F5F7F5 100%);
 }
 
 .glass-card {
   background: rgba(255,255,255,0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226,221,208,0.6);
+  border: 1px solid rgba(0,64,37,0.08);
 }
 
 .glass-dark {
-  background: rgba(26,26,26,0.7);
+  background: rgba(0,45,26,0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Animated gradient border */

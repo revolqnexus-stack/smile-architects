@@ -19,17 +19,17 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "VIRTUE Dental Clinic – Your Smile, Our Priority!",
-  description: "Comprehensive dental care in Pala, Kottayam led by Dr. Abhijit Sajo Sebastian BDS MDS. General, cosmetic, orthodontic & emergency dentistry.",
-  keywords: "Dental Clinic Pala, Dentist Kottayam, Dr. Abhijit Sajo Sebastian, Root Canal Treatment Kerala, Dental Implants Kottayam, Endodontics Pala",
-  metadataBase: new URL("https://nfc.dgtechsoln.com/virtue-dental-clinic/"),
+  title: "Smile Architects Dental Clinic – Specialized Orthodontics & Aesthetic Dentistry",
+  description: "Premier multi-specialty dental facility in Pala, Kottayam. Led by Dr. Jeo Tom Charls, MDS Orthodontist. Expert care in braces, aligners, and smile design.",
+  keywords: "Smile Architects Pala, Orthodontist Pala, Dr. Jeo Tom Charls, Dental Clinic Pala, Braces Pala, Clear Aligners Kerala, Smile Design Kottayam",
+  metadataBase: new URL("https://smilearchitects.in/"),
   alternates: {
-    canonical: "https://nfc.dgtechsoln.com/virtue-dental-clinic/",
+    canonical: "https://smilearchitects.in/",
   },
   openGraph: {
-    title: "VIRTUE Dental Clinic – Your Smile, Our Priority!",
-    description: "Expert dental care in Pala, Kottayam. Led by Dr. Abhijit Sajo Sebastian BDS MDS.",
-    url: "https://nfc.dgtechsoln.com/virtue-dental-clinic/",
+    title: "Smile Architects Dental Clinic – Pala's Premier Orthodontic Centre",
+    description: "Expert orthodontic and aesthetic dental care in Pala, Kottayam. Led by Dr. Jeo Tom Charls.",
+    url: "https://smilearchitects.in/",
   },
 };
 

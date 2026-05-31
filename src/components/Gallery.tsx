@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "/images/gallery/aesthetic makeover.webp", alt: "Aesthetic Makeover", title: "Aesthetic Makeover" },
-  { src: "/images/gallery/aesthetics.webp", alt: "Aesthetics", title: "Smile Design" },
-  { src: "/images/gallery/ceramic inlay.webp", alt: "Ceramic Inlay", title: "Ceramic Inlay" },
-  { src: "/images/gallery/rootcanal.webp", alt: "Root Canal Treatment", title: "Root Canal" },
-  { src: "/images/gallery/smile.webp", alt: "Smile", title: "Smile Correction" },
-  { src: "/images/gallery/teeth correction.webp", alt: "Teeth Correction", title: "Orthodontics" },
-  { src: "/images/gallery/veneers.jpg", alt: "Veneers", title: "Porcelain Veneers" },
-  { src: "/images/gallery/4 month root canal.webp", alt: "Root Canal Progress", title: "RCT Progress" },
+  { src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop", alt: "Aesthetic Smile Makeover", title: "Aesthetic Makeover" },
+  { src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop", alt: "Precision Orthodontics", title: "Specialized Braces" },
+  { src: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2074&auto=format&fit=crop", alt: "Clear Aligner Therapy", title: "Clear Aligners" },
+  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop", alt: "Modern Clinical Diagnostics", title: "Digital Diagnostics" },
+  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop", alt: "Patient Consultation", title: "Specialist Care" },
+  { src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop", alt: "Premium Clinic Environment", title: "Sterile OPD" },
+  { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop", alt: "Restorative Excellence", title: "Smile Design" },
+  { src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop", alt: "Medical Leadership", title: "Expert Guidance" },
 ];
 
 export default function Gallery() {
@@ -34,7 +34,7 @@ export default function Gallery() {
             <span className="italic text-primary">Your confidence.</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            A selection of clinical cases treated at Virtue Dental Clinic, showcasing our commitment to specialist precision and aesthetic excellence.
+            A selection of clinical cases treated at Smile Architects, showcasing our commitment to orthodontic precision and aesthetic excellence.
           </p>
         </div>
 

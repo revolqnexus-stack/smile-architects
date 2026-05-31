@@ -45,26 +45,23 @@ export default function Navbar() {
           style={{ boxShadow: `0 4px 30px rgba(0,0,0,${shadowOpacity})` }}
         />
 
-        <div className="relative container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="relative container mx-auto px-6 py-2 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center group">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative w-20 h-20"
+              className="relative w-28 h-28"
             >
               <Image
-                src="/images/logo.png"
-                alt="Virtue Dental Clinic Logo"
+                src="/logo.png"
+                alt="Smile Architects Dental Clinic Logo"
                 fill
+                sizes="112px"
                 className="object-contain"
                 priority
               />
             </motion.div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-serif font-bold text-foreground leading-none tracking-tight">VIRTUE</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-primary/70 mt-1">Dental Clinic</span>
-            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -93,7 +90,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="tel:+918156822525"
+                href="tel:+919447125344"
                 className="flex items-center gap-2 px-4 py-2 rounded-full border border-primary/25 text-primary text-sm font-medium hover:bg-primary/5 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" /> Call Us
@@ -101,10 +98,11 @@ export default function Navbar() {
             </motion.div>
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="https://wa.me/918156822525"
-                className="flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-white text-sm font-medium shadow-lg shadow-primary/25 hover:bg-primary/90 transition-colors"
+                href="https://wa.me/919447125344"
+                target="_blank"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all"
               >
-                <MessageCircle className="w-3.5 h-3.5" /> Book Now
+                <MessageCircle className="w-4 h-4 fill-current" /> Consult Now
               </Link>
             </motion.div>
           </div>
@@ -182,14 +180,15 @@ export default function Navbar() {
 
               <div className="p-6 space-y-3 border-t border-border">
                 <Link
-                  href="tel:+918156822525"
+                  href="tel:+919447125344"
                   className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-muted text-primary font-bold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4" /> Call Specialist
                 </Link>
                 <Link
-                  href="https://wa.me/918156822525"
+                  href="https://wa.me/919447125344"
+                  target="_blank"
                   className="flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-primary text-white font-bold shadow-lg shadow-primary/20"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

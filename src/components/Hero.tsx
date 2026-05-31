@@ -6,15 +6,15 @@ import Link from "next/link";
 import { useRef } from "react";
 
 const stats = [
-  { value: "8+", label: "Years Experience" },
+  { value: "15+", label: "Years Experience" },
   { value: "4.9★", label: "Patient Rating" },
-  { value: "500+", label: "Happy Patients" },
+  { value: "62+", label: "Dental Procedures" },
 ];
 
 const badges = [
-  { icon: Shield, text: "MDS Specialist" },
-  { icon: Zap, text: "Painless RCT" },
-  { icon: Star, text: "CBCT Research" },
+  { icon: Shield, text: "MDS Orthodontist" },
+  { icon: Zap, text: "Specialized Aligners" },
+  { icon: Star, text: "Modern Sterile OPD" },
 ];
 
 const container = {
@@ -33,23 +33,23 @@ export default function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20">
       {/* Background layers */}
       <div className="absolute inset-0 hero-gradient" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent/5 blur-[100px] translate-y-1/4 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[140px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] translate-y-1/4 -translate-x-1/4 pointer-events-none" />
 
       {/* Decorative grid */}
       <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        className="absolute inset-0 opacity-[0.015] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundSize: '80px 80px',
         }}
       />
 
-      <div className="relative container mx-auto px-6 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative container mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-center">
 
           {/* Left — text */}
           <motion.div
@@ -57,54 +57,55 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             style={{ y: textY }}
-            className="max-w-xl"
+            className="lg:col-span-7 max-w-2xl"
           >
             {/* Badge */}
-            <motion.div variants={item} className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-primary/8 border border-primary/15 text-primary text-sm font-medium mb-8">
+            <motion.div variants={item} className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
               </span>
-              Specialist Dental Care · Pala, Kottayam
+              Pala's Premier Orthodontic Centre
             </motion.div>
 
             {/* Headline */}
-            <motion.h1 variants={item} className="text-5xl sm:text-6xl lg:text-[5.5rem] font-serif text-foreground leading-[1.05] mb-6 tracking-tight">
-              Your smile.{" "}
-              <span className="block text-shimmer">Our priority.</span>
+            <motion.h1 variants={item} className="text-6xl sm:text-7xl lg:text-[6.5rem] font-serif text-foreground leading-[1] mb-8 tracking-tighter">
+              Sculpting <span className="italic">Smiles</span>.{" "}
+              <span className="block text-shimmer">Architecting Confidence.</span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-md">
-              Led by Dr. Abhijit Sajo Sebastian — MDS Endodontist and published researcher — delivering painless, precision dental care in Pala.
+            <motion.p variants={item} className="text-xl text-muted-foreground/80 leading-relaxed mb-12 max-w-lg font-medium">
+              Led by <span className="text-primary font-bold">Dr. Jeo Tom Charls</span> — MDS Orthodontist & Dentofacial Orthopedics — delivering elite dental care with precision and artistry.
             </motion.p>
 
             {/* CTAs */}
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mb-12">
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
+            <motion.div variants={item} className="flex flex-col sm:flex-row gap-5 mb-16">
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  href="https://wa.me/918156822525"
-                  className="group flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold shadow-xl shadow-primary/25 hover:bg-primary/90 transition-colors"
+                  href="https://wa.me/919447125344"
+                  target="_blank"
+                  className="group flex items-center justify-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold shadow-2xl shadow-primary/30 hover:bg-primary/95 transition-all duration-500"
                 >
-                  Book Consultation
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Book Private Consultation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#specialties"
-                  className="flex items-center justify-center gap-2 px-8 py-4 border border-border text-foreground rounded-full font-bold hover:bg-secondary transition-colors"
+                  className="flex items-center justify-center gap-2 px-10 py-5 border border-border text-foreground rounded-full font-bold hover:bg-secondary/10 transition-all duration-500"
                 >
-                  Our Specialties
+                  View Specialties
                 </Link>
               </motion.div>
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={item} className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+            <motion.div variants={item} className="flex gap-12 pt-10 border-t border-border/50">
               {stats.map((s) => (
                 <div key={s.label}>
-                  <div className="text-2xl sm:text-3xl font-serif font-bold text-foreground">{s.value}</div>
-                  <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-semibold mt-1">{s.label}</div>
+                  <div className="text-3xl sm:text-4xl font-serif font-bold text-foreground leading-none">{s.value}</div>
+                  <div className="text-[10px] text-primary font-bold uppercase tracking-[0.2em] mt-3">{s.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -112,32 +113,32 @@ export default function Hero() {
 
           {/* Right — image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, x: 30 }}
+            initial={{ opacity: 0, scale: 0.95, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             style={{ y: imageY }}
-            className="relative"
+            className="lg:col-span-5 relative"
           >
             {/* Main image frame */}
-            <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.15)]">
+            <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_60px_100px_rgba(0,0,0,0.18)] ring-1 ring-primary/5">
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop"
-                alt="Virtue Dental Clinic"
+                src="/images/gallery/smile.webp"
+                alt="Smile Architects Dental Clinic"
                 className="w-full h-full object-cover scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
 
               {/* Badges overlay */}
-              <div className="absolute top-6 left-6 flex flex-col gap-2">
+              <div className="absolute top-8 left-8 flex flex-col gap-3">
                 {badges.map(({ icon: Icon, text }, i) => (
                   <motion.div
                     key={text}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.8 + i * 0.12 }}
-                    className="glass-card flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-foreground"
+                    transition={{ delay: 1 + i * 0.15 }}
+                    className="glass-card flex items-center gap-2.5 px-4 py-2 rounded-full text-[11px] font-bold text-foreground uppercase tracking-wider"
                   >
-                    <Icon className="w-3.5 h-3.5 text-primary" />
+                    <Icon className="w-4 h-4 text-primary" />
                     {text}
                   </motion.div>
                 ))}
@@ -146,27 +147,27 @@ export default function Hero() {
 
             {/* Floating info card */}
             <motion.div
-              initial={{ opacity: 0, y: 30, x: 20 }}
+              initial={{ opacity: 0, y: 40, x: 30 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-              className="absolute -bottom-6 -right-4 sm:-right-8 glass-card p-5 rounded-2xl shadow-2xl max-w-[220px] animate-float"
+              transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+              className="absolute -bottom-8 -right-4 sm:-right-10 glass-card p-6 rounded-[2rem] shadow-2xl max-w-[240px] animate-float"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="text-primary w-4 h-4" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="text-primary w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-foreground leading-tight">Pala Bypass Road</div>
-                  <div className="text-[10px] text-muted-foreground">Vellappadu, Kottayam</div>
+                  <div className="font-bold text-sm text-foreground leading-tight">Kattakkayam Road</div>
+                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Near Federal Bank</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="text-primary w-4 h-4" />
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="text-primary w-5 h-5" />
                 </div>
                 <div>
                   <div className="font-bold text-sm text-foreground leading-tight">Mon – Sat</div>
-                  <div className="text-[10px] text-muted-foreground">10:00 AM – 7:00 PM</div>
+                  <div className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">09:30 AM – 8:00 PM</div>
                 </div>
               </div>
             </motion.div>

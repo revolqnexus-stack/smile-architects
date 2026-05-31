@@ -10,9 +10,9 @@ const contactInfo = [
     title: "Our Location",
     content: (
       <>
-        Manakkattu Avenue, 138/2,<br />
-        Pala Bypass Road, Vellappadu,<br />
-        Pala, Kottayam, Kerala — 686575
+        Smile Architects Dental Clinic,<br />
+        Kattakkayam Road, Near Federal Bank,<br />
+        Pala Town, Kottayam, Kerala — 686575
       </>
     ),
     action: { label: "Get Directions", href: "https://maps.app.goo.gl/5DS1k9PnA9vQbMU2A", external: true },
@@ -22,14 +22,14 @@ const contactInfo = [
     title: "Connect with Us",
     content: (
       <>
-        <Link href="tel:+918156822525" className="font-semibold text-foreground hover:text-primary transition-colors block">
-          +91 81568 22525
+        <Link href="tel:+919447125344" className="font-semibold text-foreground hover:text-primary transition-colors block">
+          +91 94471 25344
         </Link>
-        <Link href="https://wa.me/918156822525" className="text-primary font-bold hover:underline flex items-center gap-1.5 mt-1">
+        <Link href="https://wa.me/919447125344" className="text-primary font-bold hover:underline flex items-center gap-1.5 mt-1">
           <MessageCircle className="w-3.5 h-3.5" /> Chat on WhatsApp
         </Link>
-        <Link href="mailto:abhijitsebastian@gmail.com" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5 mt-1 text-sm">
-          <Mail className="w-3.5 h-3.5" /> abhijitsebastian@gmail.com
+        <Link href="mailto:jeotomcharls@gmail.com" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5 mt-1 text-sm">
+          <Mail className="w-3.5 h-3.5" /> jeotomcharls@gmail.com
         </Link>
       </>
     ),
@@ -41,7 +41,7 @@ const contactInfo = [
     content: (
       <>
         Monday – Saturday<br />
-        <span className="font-semibold text-foreground">10:00 AM – 07:00 PM</span><br />
+        <span className="font-semibold text-foreground">09:30 AM – 08:00 PM</span><br />
         <span className="text-destructive text-sm italic mt-1 inline-block">Closed on Sundays</span>
       </>
     ),
@@ -51,12 +51,12 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-28 relative overflow-hidden">
+    <section id="contact" className="py-32 relative overflow-hidden">
       <div className="absolute inset-0 ivory-gradient" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
       <div className="relative container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-12 gap-20 items-start">
 
           {/* Left */}
           <motion.div
@@ -64,19 +64,20 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="lg:col-span-5"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 text-primary text-xs font-bold uppercase tracking-widest mb-6">
-              Find Us
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
+              Connect With Us
             </div>
-            <h2 className="text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
-              On the bypass road{" "}
-              <span className="italic text-primary">in Pala.</span>
+            <h2 className="text-5xl lg:text-6xl font-serif text-foreground mb-8 leading-tight tracking-tight">
+              In the heart of{" "}
+              <span className="italic text-primary">Pala Town.</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-12 max-w-md">
-              Find us along Pala Bypass Road in Vellappadu, with ample parking for private vehicles. Virtue Dental Clinic serves as a specialist hub for Pala and the wider Kottayam district.
+            <p className="text-lg text-muted-foreground/80 leading-relaxed mb-16 font-medium">
+              Smile Architects is positioned along Kattakkayam Road, a highly accessible commercial corridor. Our central positioning minimizes travel friction for patients requiring recurring orthodontic adjustments.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-12">
               {contactInfo.map(({ icon: Icon, title, content, action }, i) => (
                 <motion.div
                   key={title}
@@ -84,21 +85,21 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex gap-5"
+                  className="flex gap-6"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center flex-shrink-0">
-                    <Icon className="text-primary w-5 h-5" />
+                  <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-border/50 flex items-center justify-center flex-shrink-0">
+                    <Icon className="text-primary w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-lg text-foreground mb-1.5">{title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{content}</p>
+                    <h4 className="font-serif text-xl text-foreground mb-2 tracking-tight">{title}</h4>
+                    <div className="text-muted-foreground font-medium text-sm leading-relaxed">{content}</div>
                     {action && (
                       <Link
                         href={action.href}
                         target={action.external ? "_blank" : undefined}
-                        className="inline-flex items-center gap-1 mt-2 text-sm text-primary font-medium hover:underline"
+                        className="inline-flex items-center gap-2 mt-4 text-[11px] text-primary font-bold uppercase tracking-widest hover:translate-x-1 transition-transform"
                       >
-                        <MapPin className="w-3 h-3" /> {action.label}
+                        <MapPin className="w-3.5 h-3.5" /> {action.label}
                       </Link>
                     )}
                   </div>
@@ -111,11 +112,11 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="mt-10 p-5 bg-primary/5 border border-primary/10 rounded-2xl flex items-start gap-3"
+              className="mt-16 p-6 bg-primary/5 border border-primary/10 rounded-[2rem] flex items-start gap-4"
             >
-              <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Prior appointment recommended. Listed on Practo and Justdial. Masks required on premises.
+              <Info className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-muted-foreground leading-relaxed font-medium">
+                Prior appointment recommended. Affordable consultation at ₹100. Seamless referral pathway to Mar Sleeva Medicity for tertiary care.
               </p>
             </motion.div>
           </motion.div>
@@ -125,66 +126,71 @@ export default function Contact() {
             initial={{ opacity: 0, y: 24, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="glass-card rounded-[2rem] p-8 sm:p-10 shadow-2xl shadow-primary/8 relative overflow-hidden"
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="lg:col-span-7 glass-card rounded-[3.5rem] p-10 sm:p-16 shadow-[0_40px_100px_rgba(0,0,0,0.08)] relative overflow-hidden border border-white/50"
           >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/4 rounded-bl-[4rem] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/3 rounded-bl-[6rem] pointer-events-none" />
 
-            <h3 className="text-2xl sm:text-3xl font-serif text-foreground mb-2">Quick Inquiry</h3>
-            <p className="text-muted-foreground text-sm mb-8 leading-relaxed">
-              Leave your details and our team will get back to you shortly.
+            <h3 className="text-3xl sm:text-4xl font-serif text-foreground mb-3 tracking-tight">Priority Inquiry</h3>
+            <p className="text-muted-foreground/80 font-medium text-base mb-12 leading-relaxed">
+              Experience the Smile Architects difference. Leave your details for a specialized clinical analysis.
             </p>
 
-            <form className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-foreground uppercase tracking-wider">Your Name</label>
+            <form className="space-y-8">
+              <div className="grid sm:grid-cols-2 gap-8">
+                <div className="space-y-2.5">
+                  <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Patient Full Name</label>
                   <input
                     type="text"
-                    placeholder="Full name"
-                    className="w-full px-4 py-3 bg-white/60 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm"
+                    placeholder="Enter full name"
+                    className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-foreground uppercase tracking-wider">Phone Number</label>
+                <div className="space-y-2.5">
+                  <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Primary Contact</label>
                   <input
                     type="tel"
                     placeholder="+91 00000 00000"
-                    className="w-full px-4 py-3 bg-white/60 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm"
+                    className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all text-sm font-medium"
                   />
                 </div>
               </div>
 
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-foreground uppercase tracking-wider">Treatment Interest</label>
-                <select className="w-full px-4 py-3 bg-white/60 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none text-sm text-foreground">
-                  <option>Root Canal Treatment (RCT)</option>
-                  <option>Dental Implants</option>
-                  <option>Crowns &amp; Bridges</option>
-                  <option>Cosmetic Dentistry</option>
-                  <option>General Checkup</option>
-                  <option>Paediatric Care</option>
-                  <option>Wisdom Tooth Extraction</option>
-                </select>
+              <div className="space-y-2.5">
+                <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Treatment of Interest</label>
+                <div className="relative">
+                  <select className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all appearance-none text-sm font-medium text-foreground">
+                    <option>Orthodontic Braces</option>
+                    <option>Clear Aligners / Invisalign</option>
+                    <option>Digital Smile Designing</option>
+                    <option>Growth Modification</option>
+                    <option>Root Canal Treatment</option>
+                    <option>Cosmetic Veneers</option>
+                    <option>Wisdom Tooth Extraction</option>
+                  </select>
+                  <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-foreground uppercase tracking-wider">Message</label>
+              <div className="space-y-2.5">
+                <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Message or Symptoms</label>
                 <textarea
                   rows={4}
-                  placeholder="How can our specialist help you today?"
-                  className="w-full px-4 py-3 bg-white/60 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none text-sm"
+                  placeholder="Describe your requirements for our specialist..."
+                  className="w-full px-6 py-4 bg-white/40 border border-border/50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all resize-none text-sm font-medium"
                 />
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
+                whileTap={{ scale: 0.99 }}
                 type="submit"
-                className="w-full py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 group shadow-lg shadow-primary/20"
+                className="w-full py-5 bg-primary text-white rounded-2xl font-bold hover:bg-primary/95 transition-all duration-500 flex items-center justify-center gap-3 group shadow-[0_20px_40px_rgba(0,64,37,0.2)]"
               >
-                Send Inquiry
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Submit Clinical Inquiry
+                <Send className="w-4 h-4 group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform" />
               </motion.button>
             </form>
           </motion.div>

@@ -11,13 +11,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Globe, Mail, MessageCircle } from "lucide-react";
 
-const footerSpecialties = ['General Dentistry', 'Cosmetic Dentistry', 'Orthodontics', 'Root Canal Treatment', 'Dental Implants', 'Crowns & Bridges'];
+const footerSpecialties = ['Orthodontics', 'Aesthetic Dentistry', 'Clear Aligners', 'Smile Designing', 'Dental Surgeries', 'Pediatric Dentistry'];
 const footerLinks = [
-  { label: 'About Our Doctor', href: '#practitioner' },
-  { label: 'Clinic Gallery', href: '#gallery' },
-  { label: 'Emergency Care', href: '#specialties' },
+  { label: 'Our Medical Leadership', href: '#practitioner' },
+  { label: 'Clinical Gallery', href: '#gallery' },
+  { label: 'Services & Fees', href: '#specialties' },
   { label: 'Location & Map', href: 'https://maps.app.goo.gl/5DS1k9PnA9vQbMU2A' },
-  { label: 'Book on Practo', href: '#' },
+  { label: 'Contact Us', href: '#contact' },
 ];
 
 const RevolqIcon = ({ className }: { className?: string }) => (
@@ -38,8 +38,8 @@ const RevolqIcon = ({ className }: { className?: string }) => (
 
 const socials = [
   { Icon: Globe, href: '#', label: 'Website' },
-  { Icon: Mail, href: 'mailto:abhijitsebastian@gmail.com', label: 'Email' },
-  { Icon: MessageCircle, href: 'https://wa.me/918156822525', label: 'WhatsApp' },
+  { Icon: Mail, href: 'mailto:jeotomcharls@gmail.com', label: 'Email' },
+  { Icon: MessageCircle, href: 'https://wa.me/919447125344', label: 'WhatsApp' },
   { Icon: RevolqIcon, href: 'https://revol-q.vercel.app', label: 'Revolq' },
 ];
 
@@ -64,25 +64,22 @@ export default function Home() {
 
             {/* Brand */}
             <div className="lg:col-span-2">
-              <Link href="/" className="flex items-center gap-3 group mb-7 w-fit">
+              <Link href="/" className="flex items-center group mb-7 w-fit">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="relative w-20 h-20"
+                  className="relative w-28 h-28"
                 >
                   <Image
-                    src="/images/logo.png"
-                    alt="Virtue Dental Clinic Logo"
+                    src="/logo.png"
+                    alt="Smile Architects Dental Clinic Logo"
                     fill
+                    sizes="112px"
                     className="object-contain"
                   />
                 </motion.div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-serif font-bold text-white leading-none">VIRTUE</span>
-                  <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-primary mt-1">Dental Clinic</span>
-                </div>
               </Link>
               <p className="text-white/50 leading-relaxed max-w-sm mb-8 text-sm">
-                Comprehensive specialist dental care in Pala, Kottayam. Led by Dr. Abhijit Sajo Sebastian — MDS Endodontist and published researcher.
+                Premier multi-specialty dental facility in Pala, Kottayam. Led by Dr. Jeo Tom Charls — MDS Orthodontist and Dentofacial Orthopedics.
               </p>
               <div className="flex gap-3">
                 {socials.map(({ Icon, href, label }) => (
@@ -135,7 +132,7 @@ export default function Home() {
 
           <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <p>© 2026 VIRTUE Dental Clinic. All rights reserved.</p>
+              <p>© 2026 SMILE Architects Dental Clinic. All rights reserved.</p>
               <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-white/10" />
               <Link 
                 href="https://revol-q.vercel.app" 
@@ -146,7 +143,7 @@ export default function Home() {
                 <span className="text-white/50 group-hover:text-primary font-bold tracking-wider transition-colors">REVOLQ</span>
               </Link>
             </div>
-            <p>Pala Bypass Road, Vellappadu, Pala, Kottayam — 686575</p>
+            <p>Kattakkayam Road, Near Federal Bank, Pala, Kottayam — 686575</p>
           </div>
         </div>
       </footer>
@@ -164,7 +161,7 @@ export default function Home() {
           className="animate-glow"
         >
           <Link
-            href="https://wa.me/918156822525"
+            href="https://wa.me/919447125344"
             aria-label="Contact us on WhatsApp"
             className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl shadow-[#25D366]/30"
           >
