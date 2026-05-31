@@ -27,7 +27,7 @@
              transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] } 
            }} 
            className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden" 
-           style={{ background: "#0a0f0c" }} 
+           style={{ background: "#090E17" }} 
          > 
            {/* Noise texture overlay */} 
            <div 
@@ -38,22 +38,22 @@
              }} 
            /> 
   
-           {/* Deep green spotlight from top */} 
+           {/* Deep navy spotlight from top */} 
            <motion.div 
              initial={{ opacity: 0 }} 
              animate={{ opacity: 1 }} 
              transition={{ duration: 2.5 }} 
              className="absolute inset-0 pointer-events-none" 
              style={{ 
-               background: "radial-gradient(ellipse 50% 40% at 50% 0%, rgba(29,178,51,0.07) 0%, transparent 100%)", 
+               background: "radial-gradient(ellipse 50% 40% at 50% 0%, rgba(27,77,142,0.07) 0%, transparent 100%)", 
              }} 
            /> 
   
-           {/* Bottom vignette */} 
+           {/* Bottom gold vignette */} 
            <div 
              className="absolute inset-0 pointer-events-none" 
              style={{ 
-               background: "radial-gradient(ellipse 80% 60% at 50% 110%, rgba(29,178,51,0.04) 0%, transparent 60%)", 
+               background: "radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201,168,76,0.04) 0%, transparent 60%)", 
              }} 
            /> 
   
@@ -78,9 +78,9 @@
                /> 
                <defs> 
                  <linearGradient id="arcGrad" x1="0" y1="0" x2="220" y2="220" gradientUnits="userSpaceOnUse"> 
-                   <stop offset="0%" stopColor="#1DB233" stopOpacity="0" /> 
-                   <stop offset="40%" stopColor="#1DB233" stopOpacity="1" /> 
-                   <stop offset="100%" stopColor="#1DB233" stopOpacity="0" /> 
+                   <stop offset="0%" stopColor="#C9A84C" stopOpacity="0" /> 
+                   <stop offset="40%" stopColor="#C9A84C" stopOpacity="1" /> 
+                   <stop offset="100%" stopColor="#C9A84C" stopOpacity="0" /> 
                  </linearGradient> 
                </defs> 
              </svg> 
@@ -100,7 +100,7 @@
              <svg viewBox="0 0 175 175" fill="none"> 
                <circle 
                  cx="87.5" cy="87.5" r="83" 
-                 stroke="#1DB233" 
+                 stroke="#C9A84C" 
                  strokeWidth="0.5" 
                  strokeDasharray="1 20" 
                  strokeLinecap="round" 
@@ -117,7 +117,7 @@
              style={{ 
                width: 180, 
                height: 180, 
-               background: "radial-gradient(circle, rgba(29,178,51,0.06) 0%, transparent 70%)", 
+               background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)", 
                filter: "blur(20px)", 
              }} 
            /> 
@@ -125,143 +125,102 @@
            {/* Main content */} 
            <div className="relative flex flex-col items-center"> 
   
-             {/* Logo */} 
+             {/* Logo as main animation */} 
              <motion.div 
-               initial={{ scale: 0, opacity: 0 }} 
-               animate={{ scale: 1, opacity: 1 }} 
-               transition={{ duration: 0.7, ease: [0.34, 1.56, 0.64, 1] }} 
-               className="relative mb-10" 
+               initial={{ scale: 0.5, opacity: 0 }} 
+               animate={{ 
+                 scale: [0.9, 1.1, 1], 
+                 opacity: 1,
+               }} 
+               transition={{ 
+                 duration: 2,
+                 repeat: Infinity,
+                 repeatType: "reverse",
+                 ease: "easeInOut"
+               }} 
+               className="relative mb-12" 
                style={{ 
-                 width: 80, 
-                 height: 80, 
+                 width: 160, 
+                 height: 160, 
                  borderRadius: "50%", 
-                 background: "linear-gradient(145deg, #141a15 0%, #0e1410 100%)", 
-                 boxShadow: "0 0 0 1px rgba(29,178,51,0.15), 0 0 40px rgba(29,178,51,0.08), 0 20px 40px rgba(0,0,0,0.5)", 
+                 background: "rgba(255,255,255,0.03)", 
+                 boxShadow: "0 0 80px rgba(201,168,76,0.15), inset 0 0 20px rgba(201,168,76,0.05)", 
                  display: "flex", 
                  alignItems: "center", 
                  justifyContent: "center", 
                }} 
              > 
-               {/* Inner ring */} 
-               <div 
-                 className="absolute inset-0 rounded-full" 
-                 style={{ 
-                   background: "linear-gradient(135deg, rgba(29,178,51,0.1) 0%, transparent 50%)", 
-                 }} 
-               /> 
+               {/* Pulsing rings around logo */}
+               <motion.div
+                 animate={{ scale: [1, 1.4], opacity: [0.3, 0] }}
+                 transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+                 className="absolute inset-0 rounded-full border border-[#C9A84C]/30"
+               />
+               <motion.div
+                 animate={{ scale: [1, 1.8], opacity: [0.2, 0] }}
+                 transition={{ duration: 2, delay: 0.5, repeat: Infinity, ease: "easeOut" }}
+                 className="absolute inset-0 rounded-full border border-[#C9A84C]/20"
+               />
+
                <Image 
                  src="/logo.png" 
-                 alt="Smile Architects Dental Clinic" 
-                 width={52} 
-                 height={52} 
+                 alt="Smile Architects Logo" 
+                 width={110} 
+                 height={110} 
                  className="object-contain relative z-10" 
                  priority 
                /> 
              </motion.div> 
   
-             {/* SMILE wordmark — letter by letter */} 
-             <div className="flex items-end gap-[0.06em] mb-3"> 
-               {"SMILE".split("").map((letter, i) => ( 
-                 <motion.span 
-                   key={i} 
-                   initial={{ opacity: 0, y: 16 }} 
-                   animate={{ opacity: 1, y: 0 }} 
-                   transition={{  
-                     duration: 0.5,  
-                     delay: 0.6 + i * 0.07, 
-                     ease: [0.22, 1, 0.36, 1] 
-                   }} 
-                   style={{ 
-                     fontFamily: "var(--font-serif)", 
-                     fontSize: "2.4rem", 
-                     fontWeight: 700, 
-                     letterSpacing: "0.18em", 
-                     color: "#f5f5f0", 
-                     lineHeight: 1, 
-                     textShadow: "0 0 30px rgba(29,178,51,0.15)", 
-                   }} 
-                 > 
-                   {letter} 
-                 </motion.span> 
-               ))} 
-             </div> 
-  
-             {/* Animated divider */} 
+             {/* SMILE wordmark */} 
              <motion.div 
-               initial={{ scaleX: 0, opacity: 0 }} 
-               animate={{ scaleX: 1, opacity: 1 }} 
-               transition={{ duration: 1, delay: 1.2, ease: [0.22, 1, 0.36, 1] }} 
-               className="mb-3 origin-center" 
-               style={{ 
-                 width: 160, 
-                 height: 1, 
-                 background: "linear-gradient(90deg, transparent 0%, rgba(29,178,51,0.5) 30%, rgba(29,178,51,0.5) 70%, transparent 100%)", 
-               }} 
-             /> 
-  
-             {/* Subtitle */} 
-             <motion.div 
-               initial={{ opacity: 0, letterSpacing: "0.2em" }} 
-               animate={{ opacity: 1, letterSpacing: "0.42em" }} 
-               transition={{ duration: 1, delay: 1.4, ease: "easeOut" }} 
-               style={{ 
-                 fontSize: "0.6rem", 
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8, delay: 0.5 }}
+               className="flex flex-col items-center"
+             >
+               <h1 style={{ 
+                 fontFamily: "var(--font-serif)", 
+                 fontSize: "3rem", 
+                 fontWeight: 700, 
+                 letterSpacing: "0.25em", 
+                 color: "#f5f5f0", 
+                 lineHeight: 1, 
+                 textShadow: "0 0 30px rgba(201,168,76,0.2)", 
+               }}>
+                 SMILE
+               </h1>
+               <div style={{ 
+                 fontSize: "0.75rem", 
                  fontWeight: 600, 
                  textTransform: "uppercase", 
-                 color: "rgba(29,178,51,0.65)", 
-                 letterSpacing: "0.42em", 
-                 marginBottom: "0.25rem", 
-               }} 
-             > 
-               Architects 
-             </motion.div> 
-  
-             <motion.div 
-               initial={{ opacity: 0 }} 
-               animate={{ opacity: 1 }} 
-               transition={{ duration: 0.8, delay: 1.7 }} 
-               style={{ 
-                 fontSize: "0.55rem", 
-                 fontWeight: 400, 
-                 textTransform: "uppercase", 
-                 color: "rgba(255,255,255,0.18)", 
-                 letterSpacing: "0.25em", 
-                 marginBottom: "2.5rem", 
-               }} 
-             > 
-               Pala · Kottayam · Kerala 
-             </motion.div> 
+                 color: "rgba(201,168,76,0.8)", 
+                 letterSpacing: "0.6em", 
+                 marginTop: "0.5rem"
+               }}> 
+                 Architects 
+               </div> 
+             </motion.div>
   
              {/* Loading bar */} 
              <motion.div 
                initial={{ opacity: 0 }} 
                animate={{ opacity: 1 }} 
-               transition={{ delay: 2 }} 
-               className="relative overflow-hidden rounded-full" 
+               transition={{ delay: 1.2 }} 
+               className="relative overflow-hidden rounded-full mt-12" 
                style={{ 
-                 width: 120, 
-                 height: 1.5, 
+                 width: 160, 
+                 height: 2, 
                  background: "rgba(255,255,255,0.06)", 
                }} 
              > 
                <motion.div 
                  initial={{ x: "-100%" }} 
                  animate={{ x: "0%" }} 
-                 transition={{ duration: 1.2, delay: 2, ease: [0.22, 1, 0.36, 1] }} 
+                 transition={{ duration: 2.2, ease: "easeInOut" }} 
                  className="absolute inset-0 rounded-full" 
                  style={{ 
-                   background: "linear-gradient(90deg, transparent, rgba(29,178,51,0.8), rgba(29,178,51,1))", 
-                 }} 
-               /> 
-               {/* Shimmer */} 
-               <motion.div 
-                 initial={{ x: "-200%" }} 
-                 animate={{ x: "300%" }} 
-                 transition={{ duration: 0.8, delay: 3, ease: "easeOut" }} 
-                 className="absolute inset-0 rounded-full" 
-                 style={{ 
-                   background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)", 
-                   width: "40%", 
+                   background: "linear-gradient(90deg, transparent, #C9A84C)", 
                  }} 
                /> 
              </motion.div> 

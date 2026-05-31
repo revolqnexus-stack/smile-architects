@@ -122,7 +122,7 @@ export default function Hero() {
             {/* Main image frame */}
             <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_60px_100px_rgba(0,0,0,0.18)] ring-1 ring-primary/5">
               <img
-                src="/images/gallery/smile.webp"
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop"
                 alt="Smile Architects Dental Clinic"
                 className="w-full h-full object-cover scale-105"
               />
