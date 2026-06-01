@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const stats = [
   { value: "15+", label: "Years Experience" },
@@ -24,16 +23,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
-      {/* ── Full-bleed background image ── */}
+      {/* ── Full-bleed background video ── */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero.jpg"
-          alt="Smile Architects Dental Clinic — Modern Orthodontic Facility"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover object-center"
+        >
+          <source src="/images/gallery/hero video.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* ── Left gradient overlay — text readable, right side breathes ── */}
