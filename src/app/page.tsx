@@ -51,13 +51,17 @@
        <Contact /> 
   
        {/* ── Footer ───────────────────────────────── */} 
-       <footer className="relative overflow-hidden" style={{ background: "#0F172A" }}> 
+       <footer className="relative overflow-hidden" style={{ background: "#1A1F16" }}> 
   
          {/* Background glows */} 
          <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(30,77,43,0.1) 0%, transparent 70%)" }} /> 
+           style={{ background: "radial-gradient(circle, rgba(45,106,45,0.12) 0%, transparent 70%)" }} /> 
          <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none" 
-           style={{ background: "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)" }} /> 
+           style={{ background: "radial-gradient(circle, rgba(232,197,71,0.06) 0%, transparent 70%)" }} /> 
+
+         {/* Yellow top accent */}
+         <div className="absolute top-0 left-0 right-0 h-px"
+           style={{ background: "linear-gradient(90deg, transparent 0%, rgba(232,197,71,0.4) 30%, rgba(45,106,45,0.4) 70%, transparent 100%)" }} /> 
   
          <div className="relative container mx-auto px-6 pt-20 pb-10"> 
            <div className="grid lg:grid-cols-4 gap-14 mb-16"> 
@@ -88,8 +92,8 @@
                        className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300" 
                        style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)" }} 
                        onMouseEnter={e => { 
-                         (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)"; 
-                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.2)"; 
+                         (e.currentTarget as HTMLElement).style.background = "rgba(201,168,76,0.15)"; 
+                         (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,168,76,0.4)"; 
                        }} 
                        onMouseLeave={e => { 
                          (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.02)"; 
@@ -114,9 +118,9 @@
                    <li key={item}> 
                      <Link href="#specialties" 
                        className="text-sm transition-colors duration-200" 
-                       style={{ color: "rgba(255,255,255,0.4)" }} 
+                       style={{ color: "rgba(255,255,255,0.55)" }} 
                        onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFFFFF"} 
-                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"} 
+                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.55)"} 
                      > 
                        {item} 
                      </Link> 
@@ -137,9 +141,9 @@
                      <Link href={href} 
                        target={href.startsWith('http') ? "_blank" : undefined} 
                        className="text-sm transition-colors duration-200" 
-                       style={{ color: "rgba(255,255,255,0.4)" }} 
+                       style={{ color: "rgba(255,255,255,0.55)" }} 
                        onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FFFFFF"} 
-                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.4)"} 
+                       onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.55)"} 
                      > 
                        {label} 
                      </Link> 
@@ -177,8 +181,8 @@
        > 
          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.93 }} className="animate-glow"> 
            <Link href="https://wa.me/919447125344" aria-label="Contact us on WhatsApp" 
-             className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl" 
-             style={{ boxShadow: "0 8px 32px rgba(37,211,102,0.35)" }}> 
+             className="w-14 h-14 sm:w-16 sm:h-16 rounded-full text-white flex items-center justify-center shadow-2xl" 
+             style={{ background: "#25D366", boxShadow: "0 8px 32px rgba(37,211,102,0.4)" }}> 
              <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8 fill-current" /> 
            </Link> 
          </motion.div> 

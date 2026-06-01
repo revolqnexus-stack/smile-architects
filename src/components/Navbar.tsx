@@ -41,11 +41,13 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       >
         <motion.div
-          className="absolute inset-0 bg-white/92 border-b border-black/5"
+          className="absolute inset-0 border-b"
           style={{ 
-            opacity: bgOpacity, 
-            backdropFilter: 'blur(8px)', 
-            WebkitBackdropFilter: 'blur(8px)' 
+            opacity: bgOpacity,
+            background: "rgba(250,250,247,0.94)",
+            borderColor: "rgba(45,106,45,0.08)",
+            backdropFilter: 'blur(12px)', 
+            WebkitBackdropFilter: 'blur(12px)' 
           }}
         />
         <motion.div
@@ -80,11 +82,13 @@ export default function Navbar() {
                 href={item.href}
                 className="relative text-[13px] font-bold uppercase tracking-[0.15em] py-1 group"
               >
-                <span className={`transition-colors duration-300 ${activeSection === item.href.replace('#', '') ? 'text-primary' : 'text-[#111827]/60 hover:text-primary'}`}>
+                <span className={`transition-colors duration-300 ${activeSection === item.href.replace('#', '') ? 'text-primary' : 'hover:text-primary'}`}
+                  style={{ color: activeSection === item.href.replace('#', '') ? '#2D6A2D' : 'rgba(26,31,22,0.55)' }}>
                   {item.label}
                 </span>
                 <motion.span
-                  className="absolute -bottom-1 left-0 h-[1.5px] bg-primary rounded-full"
+                  className="absolute -bottom-1 left-0 h-[2px] rounded-full"
+                  style={{ background: "#E8C547" }}
                   initial={{ width: 0 }}
                   animate={{ width: activeSection === item.href.replace('#', '') ? '100%' : 0 }}
                   transition={{ duration: 0.3 }}
@@ -99,7 +103,8 @@ export default function Navbar() {
               <Link
                 href="https://wa.me/919447125344"
                 target="_blank"
-                className="px-8 py-3.5 rounded-full bg-primary text-white text-[11px] font-bold uppercase tracking-[0.2em] shadow-xl shadow-primary/20 transition-all hover:shadow-primary/30"
+                className="px-8 py-3.5 rounded-full text-white text-[11px] font-bold uppercase tracking-[0.2em] transition-all"
+                style={{ background: "#2D6A2D", boxShadow: "0 4px 20px rgba(45,106,45,0.25)" }}
               >
                 Book Appointment
               </Link>
@@ -144,20 +149,29 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-background shadow-2xl flex flex-col clay-card !rounded-none"
+              className="fixed top-0 right-0 bottom-0 z-50 w-72 flex flex-col"
+              style={{
+                background: "#FAFAF7",
+                boxShadow: "-8px 0 40px rgba(45,106,45,0.12)",
+                borderLeft: "1px solid rgba(45,106,45,0.08)"
+              }}
             >
-              <div className="flex items-center justify-between p-6 border-b border-border">
-                <span className="font-serif font-bold text-lg">Menu</span>
+              {/* Header */}
+              <div className="flex items-center justify-between px-6 py-5"
+                style={{ borderBottom: "1px solid rgba(45,106,45,0.08)" }}>
+                <span className="font-serif font-bold text-lg" style={{ color: "#1A1F16" }}>Menu</span>
                 <motion.button
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-xl clay-card !shadow-sm !rounded-xl hover:bg-muted transition-colors"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center transition-colors"
+                  style={{ background: "rgba(45,106,45,0.06)", border: "1px solid rgba(45,106,45,0.1)" }}
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4" style={{ color: "#2D6A2D" }} />
                 </motion.button>
               </div>
 
-              <nav className="flex-1 p-6 space-y-1">
+              {/* Nav links */}
+              <nav className="flex-1 px-4 py-4 space-y-1">
                 {navLinks.map((item, i) => (
                   <motion.div
                     key={item.label}
@@ -168,19 +182,25 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="flex items-center justify-between py-4 px-4 rounded-2xl hover:bg-primary/5 transition-colors group"
+                      className="flex items-center justify-between py-3.5 px-4 rounded-2xl transition-colors group"
+                      style={{ color: "#1A1F16" }}
+                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(45,106,45,0.05)"}
+                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}
                     >
-                      <span className="text-lg font-bold text-[#111827] uppercase tracking-widest">{item.label}</span>
-                      <ChevronRight className="w-5 h-5 text-[#111827]/20 group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+                      <span className="text-base font-bold uppercase tracking-widest" style={{ color: "#1A1F16" }}>{item.label}</span>
+                      <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" style={{ color: "rgba(45,106,45,0.3)" }} />
                     </Link>
                   </motion.div>
                 ))}
               </nav>
 
-              <div className="p-6 space-y-4 border-t border-black/5">
+              {/* Bottom CTAs */}
+              <div className="px-4 pb-6 space-y-3"
+                style={{ borderTop: "1px solid rgba(45,106,45,0.08)", paddingTop: "1.25rem" }}>
                 <Link
                   href="tel:+919447125344"
-                  className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-[#111827]/5 text-[#111827] font-bold uppercase tracking-widest text-[11px]"
+                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold uppercase tracking-widest text-[11px] transition-colors"
+                  style={{ background: "rgba(45,106,45,0.06)", border: "1px solid rgba(45,106,45,0.12)", color: "#2D6A2D" }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Phone className="w-4 h-4" /> Call Specialist
@@ -188,7 +208,8 @@ export default function Navbar() {
                 <Link
                   href="https://wa.me/919447125344"
                   target="_blank"
-                  className="flex items-center justify-center gap-2 py-4 rounded-2xl bg-primary text-white font-bold uppercase tracking-[0.2em] text-[11px] shadow-lg shadow-primary/20"
+                  className="flex items-center justify-center gap-2 py-3.5 rounded-2xl font-bold uppercase tracking-[0.15em] text-[11px] text-white transition-all"
+                  style={{ background: "#2D6A2D", boxShadow: "0 4px 16px rgba(45,106,45,0.25)" }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <MessageCircle className="w-4 h-4" /> WhatsApp Booking

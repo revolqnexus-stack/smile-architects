@@ -53,9 +53,9 @@ export default function CustomCursor() {
         }}
         animate={{
           scale: isHovering ? 1.5 : 1,
-          borderColor: isHovering ? "rgba(212, 175, 55, 0.8)" : "rgba(212, 175, 55, 0.3)",
+          borderColor: isHovering ? "rgba(232, 197, 71, 0.9)" : "rgba(45, 106, 45, 0.4)",
         }}
-        className="w-8 h-8 rounded-full border border-gold pointer-events-none"
+        className="w-8 h-8 rounded-full border pointer-events-none"
       />
       {/* Inner Dot */}
       <motion.div
@@ -63,9 +63,11 @@ export default function CustomCursor() {
           x: mousePosition.x - 2,
           y: mousePosition.y - 2,
           scale: isHovering ? 0 : 1,
+          backgroundColor: isHovering ? "#E8C547" : "#2D6A2D",
         }}
         transition={{ type: "spring", damping: 30, stiffness: 400, mass: 0.5 }}
-        className="w-1 h-1 bg-gold rounded-full absolute pointer-events-none"
+        className="w-1.5 h-1.5 rounded-full absolute pointer-events-none"
+        style={{ background: "#2D6A2D" }}
       />
     </div>
   );
