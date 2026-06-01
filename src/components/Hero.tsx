@@ -36,19 +36,7 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* ── Left gradient overlay — text readable, right side breathes ── */}
-      <div
-        className="absolute inset-0 z-10 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(9,14,23,0.92) 0%, rgba(9,14,23,0.75) 40%, rgba(9,14,23,0.10) 70%, transparent 100%)",
-        }}
-      />
-      {/* Mobile: full-width darker overlay */}
-      <div
-        className="absolute inset-0 z-10 pointer-events-none md:hidden"
-        style={{ background: "rgba(9,14,23,0.88)" }}
-      />
+
 
       {/* ── Content ── */}
       <div className="relative z-20 w-full container mx-auto px-6 py-32 md:py-40">
@@ -168,7 +156,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
-        className="absolute bottom-8 right-8 z-20 hidden md:flex flex-col gap-3 p-5 rounded-[1.75rem] w-[220px]"
+        className="absolute bottom-8 right-8 z-20 flex flex-col gap-3 p-5 rounded-[1.75rem] w-[220px]"
         style={{
           background: "rgba(255,255,255,0.1)",
           backdropFilter: "blur(20px)",
