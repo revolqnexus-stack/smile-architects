@@ -148,6 +148,33 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
+
+          {/* Mobile-only: hours + call */}
+          <motion.div
+            variants={item}
+            className="mt-6 flex items-center justify-between gap-3 md:hidden px-4 py-3 rounded-2xl"
+            style={{
+              background: "rgba(255,255,255,0.1)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(255,255,255,0.15)",
+            }}
+          >
+            <div>
+              <p className="text-[9px] font-bold uppercase tracking-[0.2em] mb-0.5" style={{ color: "#C9A84C" }}>
+                Opening Hours
+              </p>
+              <p className="text-white text-xs font-bold">Mon – Sat</p>
+              <p className="text-[10px]" style={{ color: "rgba(255,255,255,0.6)" }}>9:30 AM – 8:00 PM</p>
+            </div>
+            <Link
+              href="tel:+919447125344"
+              className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-[11px] uppercase tracking-widest"
+              style={{ background: "#C9A84C", color: "#0A0E17" }}
+            >
+              <Phone className="w-3.5 h-3.5" />
+              Call
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -156,7 +183,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
-        className="absolute bottom-8 right-8 z-20 flex flex-col gap-3 p-5 rounded-[1.75rem] w-[220px]"
+        className="absolute bottom-8 right-8 z-20 hidden md:flex flex-col gap-3 p-5 rounded-[1.75rem] w-[220px]"
         style={{
           background: "rgba(255,255,255,0.1)",
           backdropFilter: "blur(20px)",
