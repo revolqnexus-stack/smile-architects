@@ -4,14 +4,46 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop", alt: "Aesthetic Smile Makeover", title: "Aesthetic Makeover" },
-  { src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop", alt: "Precision Orthodontics", title: "Specialized Braces" },
-  { src: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=2074&auto=format&fit=crop", alt: "Clear Aligner Therapy", title: "Clear Aligners" },
-  { src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop", alt: "Modern Clinical Diagnostics", title: "Digital Diagnostics" },
-  { src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop", alt: "Patient Consultation", title: "Specialist Care" },
-  { src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop", alt: "Premium Clinic Environment", title: "Sterile OPD" },
-  { src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop", alt: "Restorative Excellence", title: "Smile Design" },
-  { src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop", alt: "Medical Leadership", title: "Expert Guidance" },
+  {
+    src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop",
+    alt: "Dentist performing orthodontic treatment",
+    title: "Orthodontic Care"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop",
+    alt: "Modern dental clinic interior",
+    title: "Modern Clinic"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2070&auto=format&fit=crop",
+    alt: "Dental examination and consultation",
+    title: "Patient Consultation"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069&auto=format&fit=crop",
+    alt: "Dental braces and orthodontic treatment",
+    title: "Braces Treatment"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=2070&auto=format&fit=crop",
+    alt: "Dental tools and equipment",
+    title: "Precision Tools"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=2070&auto=format&fit=crop",
+    alt: "Sterile dental operatory",
+    title: "Sterile OPD"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2069&auto=format&fit=crop",
+    alt: "Smile transformation result",
+    title: "Smile Design"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?q=80&w=2080&auto=format&fit=crop",
+    alt: "Clear aligner therapy",
+    title: "Clear Aligners"
+  },
 ];
 
 export default function Gallery() {
