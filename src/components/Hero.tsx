@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MapPin, Clock, ArrowRight, Star, Shield, Zap, ChevronDown } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Star, Shield, Zap } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -237,21 +237,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[10px] uppercase tracking-widest font-semibold" style={{ color: "#6B7160" }}>Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-5 h-5" style={{ color: "#2D6A2D", opacity: 0.5 }} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

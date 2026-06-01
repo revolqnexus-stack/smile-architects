@@ -36,8 +36,8 @@ export default function LoadingScreen() {
               <Image
                 src="/logo.png"
                 alt="Smile Architects Logo"
-                width={100}
-                height={100}
+                width={240}
+                height={240}
                 className="object-contain"
                 priority
               />
@@ -48,7 +48,7 @@ export default function LoadingScreen() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="h-px w-28 mb-6"
+              className="h-px w-48 mb-6"
               style={{ background: "linear-gradient(90deg, #2D6A2D, #E8C547, #2D6A2D)" }}
             />
 

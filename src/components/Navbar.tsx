@@ -84,7 +84,7 @@ export default function Navbar() {
           />
         </motion.div>
 
-        <div className="relative container mx-auto px-6 flex items-center justify-between" style={{ height: "80px" }}>
+        <div className="relative container mx-auto px-6 flex items-center justify-between" style={{ height: "110px" }}>
 
           {/* Logo — larger, vertically centered */}
           <Link href="/" className="flex items-center flex-shrink-0">
@@ -92,13 +92,13 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               className="relative"
-              style={{ width: "160px", height: "72px" }}
+              style={{ width: "384px", height: "173px" }}
             >
               <Image
                 src="/logo.png"
                 alt="Smile Architects Dental Clinic Logo"
                 fill
-                sizes="160px"
+                sizes="384px"
                 className="object-contain object-left"
                 priority
               />
@@ -207,8 +207,8 @@ export default function Navbar() {
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 py-5"
                 style={{ borderBottom: "1px solid rgba(45,106,45,0.08)" }}>
-                <div className="relative" style={{ width: "120px", height: "48px" }}>
-                  <Image src="/logo.png" alt="Smile Architects" fill sizes="120px" className="object-contain object-left" />
+                <div className="relative" style={{ width: "200px", height: "90px" }}>
+                  <Image src="/logo.png" alt="Smile Architects" fill sizes="200px" className="object-contain object-left" />
                 </div>
                 <motion.button
                   whileTap={{ scale: 0.9 }}
